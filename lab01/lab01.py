@@ -18,6 +18,11 @@ q3bWebsites = [
     "usp.br ",
     "ed.ac.uk"
 ]
+
+q3cWebsites = [
+    "128.112.128.55",
+    "213.144.137.198"
+]
 # os.system("ls -l")
 
 def q2 ():
@@ -37,10 +42,19 @@ def q3b():
     i = 1
     for link in q3bWebsites:
         print(f"Testing Link #{i}: \n\n")
-        os.system(f"traceroute {link}")
+        os.system(f"traceroute -m 30 {link}")
+        print("________________________________________________________________________________________")
+        print("\n")
+        i+=1
+
+def q3c():
+    i = 1
+    for link in q3cWebsites:
+        print(f"Testing Link #{i}: \n\n")
+        os.system(f"traceroute -m 30 {link}")
         print("________________________________________________________________________________________")
         print("\n")
         i+=1
 
 # q1()
-q3b()
+q3c()
