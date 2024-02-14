@@ -41,7 +41,7 @@ The first EU router is number 10. Which is ip4.gtt.net (154.14.130.98).
 
 #### i)
 
-The last routers the destinations have in common is #3 with IP address: 202.90.206.100
+The last routers that the routes have in common is #3 with IP address: 202.90.206.100
 
 ```
 Testing Link #1: 
@@ -274,7 +274,63 @@ Standard routers appear if the IP address has not been translated. This is the c
 
 ## Q4)
 
-### Data
+### Data:
+
+#### <http://cdu.edu.au>:
+#### Delay vs Time and Packet Number
+![](/lab01/data/cdu-edu-au/cdu-edu-delay.png)
+#### Delay vs. Packet Size
+![](/lab01/data/cdu-edu-au/cdu-edu-scatter.png)
+
+#### Average and Min delay for packet size
+| Packet-Size | Avg    | Min    |
+| ----------- | ------ | ------ |
+| 50          | 71.14  | 61.694 |
+| 250         | 67.106 | 61.878 |
+| 500         | 68.239 | 62.84  |
+| 750         | 67.265 | 63.326 |
+| 1000        | 67.785 | 62.549 |
+| 1250        | 67.948 | 62.787 |
+| 1500        | 69.891 | 62.854 |
+
+#### <http://usp.br>:
+#### Delay vs Time and Packet Number
+![](/lab01/data/usp/usp-delay.png)
+#### Delay vs. Packet Size
+![](/lab01/data/usp/usp-scatter.png)
+
+#### Average and Min delay for packet size
+| Packet-Size | Avg     | Min     |
+| ----------- | ------- | ------- |
+| 50          | 392.834 | 334.572 |
+| 250         | 404.478 | 332.872 |
+| 500         | 397.889 | 335.137 |
+| 750         | 389.037 | 333.947 |
+| 1000        | 397.218 | 335.194 |
+| 1250        | 397.085 | 335.352 |
+| 1500        | 395.499 | 333.484 |
+
+
+
+#### <http://ed.ac.uk>:
+#### Delay vs Time and Packet Number
+![](/lab01/data/ed-ac-uk/ed-ac-uk-delay.png)
+#### Delay vs. Packet Size
+![](/lab01/data/ed-ac-uk/ed-ac-uk-scatter.png)
+
+#### Average and Min delay for packet size
+| Packet-Size | Avg     | Min     |
+| ----------- | ------- | ------- |
+| 50          | 350.898 | 284.239 |
+| 250         | 345.494 | 291.038 |
+| 500         | 345.516 | 284.403 |
+| 750         | 340.107 | 288.637 |
+| 1000        | 339.109 | 286.988 |
+| 1250        | 357.529 | 289.484 |
+| 1500        | 339.793 | 284.49  |
+
+
+
 
 ### a)
 
@@ -293,8 +349,9 @@ Standard routers appear if the IP address has not been translated. This is the c
 Possible reasons that the y-axis is greater than two are:
 
 1) Transmission delay incurred along the route because each node(router) needs to manage other packets.
-2) Propogation speed of a packet is not actually 3E8 m/s. It is more closer to 2E8 m/s because the speed of light (a packet) will travel slower in fibre optic (a different material)
+2) Propogation speed of a packet is not actually $3*10^8 m/s$. It is more closer to $2*10^8 m/s$ because the speed of light (a packet) will travel slower in fibre optic (a different material)
 3) Possible Processing and Queuing delay from individual routers as they will be managing other packets
+4) The Round Trip Time (RTT) represents at least twice the time of the minimum time taken, because it requires going forwards and returning from the destination
 
 ### d)
 
