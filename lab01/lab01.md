@@ -265,3 +265,29 @@ Something to note is the close proximity of the IP addresses for <https://init.7
 #### iii)
 
 Standard routers appear if the IP address has not been translated. This is the case with <https://www.net.princeton.edu/traceroute.html> . However, it appears with the  <https://init.7> and my SuperLoop ISP have used a translated IP (NAT Gateway) which may explain why the terminating IP addresses are different.
+
+## Q4)
+
+### a)
+
+| Link                            | Location  | Euclidean Distance from Sydney(km) | Time to Destination(s) | Time to destination (ms) | Speed of light (m/s)  | 300000000 |
+| ------------------------------- | --------- | ---------------------------------- | ---------------------- | ------------------------ | --------------------- | --------- |
+| [cdu.edu.au](http://cdu.edu.au) | Darwin    | 3,149                              | 0.01049666667          | 10.49666667              | Speed of light (km/s) | 300000    |
+| [usp.br](http://usp.br)         | Sao Paulo | 14,235                             | 0.04745                | 47.45                    |                       |           |
+| [ed.ac.uk](http://ed.ac.uk)     | Edinburgh | 17,006                             | 0.05668666667          | 56.68666667              |                       |           |
+
+### b)
+
+![output](./Figure_1.png)
+
+### c)
+
+Two possible reasons that the y-axis is greater than two are:
+
+1) Transmission delay incurred along the route because each node(router) needs to manage other packets.
+2) Propogation speed of a packet is not actually 3E8 m/s. It is more closer to 2E8 m/s because the speed of light (a packet) will travel slower in fibre optic (a different material)
+3) Possible Processing and Queuing delay
+
+### d)
+
+Delay to the destination will vary over time. This is because the nodes/routers to the destination will have manage other packets and this means that factors such as processing, queueing and transmission time will also wildy vary.
