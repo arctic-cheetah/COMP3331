@@ -319,4 +319,4 @@ $d$ = The distance between two nodes (routers)
 
 $v$ = The speed of light in a physical medium
 
-Therefore, only transmission delay depends
+Therefore, only transmission delay depends on the size of the packet $L$. The others do not.
