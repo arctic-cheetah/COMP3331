@@ -169,10 +169,12 @@ Ultimately, hop count and physical distance must be weakly correlated as there m
 My public ip address is as follows:
 ![output](./lab01-q3-ci.png)
 
-Output from [https://www.net.princeton.edu/traceroute.html](https://www.net.princeton.edu/traceroute.html)
+##### Output from [https://www.net.princeton.edu/traceroute.html](https://www.net.princeton.edu/traceroute.html) to my IP address
+
 ![output](./lab01-q3-cii.png)
 
-Output from <https://www.as13030.net>
+##### Output from <https://www.as13030.net> to my IP address
+
 ![output](./lab01-q3-ciii.png)
 
 IP address of the selected links:
@@ -182,7 +184,7 @@ IP address of the selected links:
 | <https://www.as13030.net>       | 213.144.137.198 |
 |                               |                 |
 
-##### My output
+##### My output to 128.112.128.55
 
 ```
 Testing Link #1: 
@@ -216,7 +218,11 @@ traceroute to 128.112.128.55 (128.112.128.55), 30 hops max, 60 byte packets
 25  www.net.princeton.edu (128.112.128.55)  239.396 ms  237.406 ms  237.373 ms
 ________________________________________________________________________________________
 
+```
 
+##### My output to 213.144.137.198
+
+```
 Testing Link #2: 
 
 
@@ -268,6 +274,8 @@ Standard routers appear if the IP address has not been translated. This is the c
 
 ## Q4)
 
+### Data
+
 ### a)
 
 | Link                            | Location  | Euclidean Distance from Sydney(km) | Time to Destination(s) | Time to destination (ms) | Speed of light (m/s)  | 300000000 |
@@ -282,12 +290,33 @@ Standard routers appear if the IP address has not been translated. This is the c
 
 ### c)
 
-Two possible reasons that the y-axis is greater than two are:
+Possible reasons that the y-axis is greater than two are:
 
 1) Transmission delay incurred along the route because each node(router) needs to manage other packets.
 2) Propogation speed of a packet is not actually 3E8 m/s. It is more closer to 2E8 m/s because the speed of light (a packet) will travel slower in fibre optic (a different material)
-3) Possible Processing and Queuing delay
+3) Possible Processing and Queuing delay from individual routers as they will be managing other packets
 
 ### d)
 
 Delay to the destination will vary over time. This is because the nodes/routers to the destination will have manage other packets and this means that factors such as processing, queueing and transmission time will also wildy vary.
+
+### e)
+
+| # | Delay type   | Definition                                                            | Formula |
+|---|--------------|-----------------------------------------------------------------------|---------|
+| 1 | Processing   | time required to examine the packet headers and determine redirection |         |
+| 2 | Queueing     | time spent by the packet waiting to be transmitted onto the link      |         |
+| 3 | Transmission | time required to push the packet into the link                        | $(L / R)$   |
+| 4 | Propogation  | time spent by the packet travelling from the beginning to end node    | $(d / v)$   |
+
+Where:
+
+$R$ = Transmission rate of the link
+
+$L$ = The packet length in bits
+
+$d$ = The distance between two nodes (routers)
+
+$v$ = The speed of light in a physical medium
+
+Therefore, only transmission delay depends
