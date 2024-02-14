@@ -1,0 +1,55 @@
+PING ed.ac.uk (129.215.97.66) 222(250) bytes of data.
+230 bytes from kelso.ed.ac.uk (129.215.97.66): icmp_seq=1 ttl=100 time=354 ms
+230 bytes from kelso.ed.ac.uk (129.215.97.66): icmp_seq=2 ttl=100 time=378 ms
+230 bytes from kelso.ed.ac.uk (129.215.97.66): icmp_seq=3 ttl=100 time=404 ms
+230 bytes from kelso.ed.ac.uk (129.215.97.66): icmp_seq=4 ttl=100 time=324 ms
+230 bytes from kelso.ed.ac.uk (129.215.97.66): icmp_seq=5 ttl=100 time=350 ms
+230 bytes from kelso.ed.ac.uk (129.215.97.66): icmp_seq=6 ttl=100 time=372 ms
+230 bytes from kelso.ed.ac.uk (129.215.97.66): icmp_seq=7 ttl=100 time=396 ms
+230 bytes from kelso.ed.ac.uk (129.215.97.66): icmp_seq=8 ttl=100 time=303 ms
+230 bytes from kelso.ed.ac.uk (129.215.97.66): icmp_seq=9 ttl=100 time=343 ms
+230 bytes from kelso.ed.ac.uk (129.215.97.66): icmp_seq=10 ttl=100 time=365 ms
+230 bytes from kelso.ed.ac.uk (129.215.97.66): icmp_seq=11 ttl=100 time=388 ms
+230 bytes from kelso.ed.ac.uk (129.215.97.66): icmp_seq=12 ttl=100 time=307 ms
+230 bytes from kelso.ed.ac.uk (129.215.97.66): icmp_seq=13 ttl=100 time=305 ms
+230 bytes from kelso.ed.ac.uk (129.215.97.66): icmp_seq=14 ttl=100 time=294 ms
+230 bytes from kelso.ed.ac.uk (129.215.97.66): icmp_seq=15 ttl=100 time=390 ms
+230 bytes from kelso.ed.ac.uk (129.215.97.66): icmp_seq=16 ttl=100 time=406 ms
+230 bytes from kelso.ed.ac.uk (129.215.97.66): icmp_seq=17 ttl=100 time=326 ms
+230 bytes from kelso.ed.ac.uk (129.215.97.66): icmp_seq=18 ttl=100 time=352 ms
+230 bytes from kelso.ed.ac.uk (129.215.97.66): icmp_seq=19 ttl=100 time=294 ms
+230 bytes from kelso.ed.ac.uk (129.215.97.66): icmp_seq=20 ttl=100 time=401 ms
+230 bytes from kelso.ed.ac.uk (129.215.97.66): icmp_seq=21 ttl=100 time=303 ms
+230 bytes from kelso.ed.ac.uk (129.215.97.66): icmp_seq=22 ttl=100 time=341 ms
+230 bytes from kelso.ed.ac.uk (129.215.97.66): icmp_seq=23 ttl=100 time=367 ms
+230 bytes from kelso.ed.ac.uk (129.215.97.66): icmp_seq=24 ttl=100 time=390 ms
+230 bytes from kelso.ed.ac.uk (129.215.97.66): icmp_seq=25 ttl=100 time=309 ms
+230 bytes from kelso.ed.ac.uk (129.215.97.66): icmp_seq=26 ttl=100 time=303 ms
+230 bytes from kelso.ed.ac.uk (129.215.97.66): icmp_seq=27 ttl=100 time=292 ms
+230 bytes from kelso.ed.ac.uk (129.215.97.66): icmp_seq=28 ttl=100 time=310 ms
+230 bytes from kelso.ed.ac.uk (129.215.97.66): icmp_seq=29 ttl=100 time=385 ms
+230 bytes from kelso.ed.ac.uk (129.215.97.66): icmp_seq=30 ttl=100 time=295 ms
+230 bytes from kelso.ed.ac.uk (129.215.97.66): icmp_seq=31 ttl=100 time=346 ms
+230 bytes from kelso.ed.ac.uk (129.215.97.66): icmp_seq=32 ttl=100 time=371 ms
+230 bytes from kelso.ed.ac.uk (129.215.97.66): icmp_seq=33 ttl=100 time=393 ms
+230 bytes from kelso.ed.ac.uk (129.215.97.66): icmp_seq=34 ttl=100 time=314 ms
+230 bytes from kelso.ed.ac.uk (129.215.97.66): icmp_seq=35 ttl=100 time=295 ms
+230 bytes from kelso.ed.ac.uk (129.215.97.66): icmp_seq=36 ttl=100 time=362 ms
+230 bytes from kelso.ed.ac.uk (129.215.97.66): icmp_seq=37 ttl=100 time=385 ms
+230 bytes from kelso.ed.ac.uk (129.215.97.66): icmp_seq=38 ttl=100 time=342 ms
+230 bytes from kelso.ed.ac.uk (129.215.97.66): icmp_seq=39 ttl=100 time=331 ms
+230 bytes from kelso.ed.ac.uk (129.215.97.66): icmp_seq=40 ttl=100 time=291 ms
+230 bytes from kelso.ed.ac.uk (129.215.97.66): icmp_seq=41 ttl=100 time=376 ms
+230 bytes from kelso.ed.ac.uk (129.215.97.66): icmp_seq=42 ttl=100 time=401 ms
+230 bytes from kelso.ed.ac.uk (129.215.97.66): icmp_seq=43 ttl=100 time=321 ms
+230 bytes from kelso.ed.ac.uk (129.215.97.66): icmp_seq=44 ttl=100 time=346 ms
+230 bytes from kelso.ed.ac.uk (129.215.97.66): icmp_seq=45 ttl=100 time=369 ms
+230 bytes from kelso.ed.ac.uk (129.215.97.66): icmp_seq=46 ttl=100 time=392 ms
+230 bytes from kelso.ed.ac.uk (129.215.97.66): icmp_seq=47 ttl=100 time=415 ms
+230 bytes from kelso.ed.ac.uk (129.215.97.66): icmp_seq=48 ttl=100 time=291 ms
+230 bytes from kelso.ed.ac.uk (129.215.97.66): icmp_seq=49 ttl=100 time=292 ms
+230 bytes from kelso.ed.ac.uk (129.215.97.66): icmp_seq=50 ttl=100 time=293 ms
+
+--- ed.ac.uk ping statistics ---
+50 packets transmitted, 50 received, 0% packet loss, time 49021ms
+rtt min/avg/max/mdev = 291.038/345.494/414.773/39.424 ms

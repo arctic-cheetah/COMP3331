@@ -1,0 +1,55 @@
+PING ed.ac.uk (129.215.97.67) 722(750) bytes of data.
+730 bytes from brora.ed.ac.uk (129.215.97.67): icmp_seq=1 ttl=101 time=372 ms
+730 bytes from brora.ed.ac.uk (129.215.97.67): icmp_seq=2 ttl=101 time=392 ms
+730 bytes from brora.ed.ac.uk (129.215.97.67): icmp_seq=3 ttl=101 time=416 ms
+730 bytes from brora.ed.ac.uk (129.215.97.67): icmp_seq=4 ttl=101 time=337 ms
+730 bytes from brora.ed.ac.uk (129.215.97.67): icmp_seq=5 ttl=101 time=365 ms
+730 bytes from brora.ed.ac.uk (129.215.97.67): icmp_seq=6 ttl=101 time=290 ms
+730 bytes from brora.ed.ac.uk (129.215.97.67): icmp_seq=7 ttl=101 time=291 ms
+730 bytes from brora.ed.ac.uk (129.215.97.67): icmp_seq=8 ttl=101 time=306 ms
+730 bytes from brora.ed.ac.uk (129.215.97.67): icmp_seq=9 ttl=101 time=350 ms
+730 bytes from brora.ed.ac.uk (129.215.97.67): icmp_seq=10 ttl=101 time=289 ms
+730 bytes from brora.ed.ac.uk (129.215.97.67): icmp_seq=11 ttl=101 time=370 ms
+730 bytes from brora.ed.ac.uk (129.215.97.67): icmp_seq=12 ttl=101 time=296 ms
+730 bytes from brora.ed.ac.uk (129.215.97.67): icmp_seq=13 ttl=101 time=289 ms
+730 bytes from brora.ed.ac.uk (129.215.97.67): icmp_seq=14 ttl=101 time=366 ms
+730 bytes from brora.ed.ac.uk (129.215.97.67): icmp_seq=15 ttl=101 time=385 ms
+730 bytes from brora.ed.ac.uk (129.215.97.67): icmp_seq=16 ttl=101 time=412 ms
+730 bytes from brora.ed.ac.uk (129.215.97.67): icmp_seq=17 ttl=101 time=290 ms
+730 bytes from brora.ed.ac.uk (129.215.97.67): icmp_seq=18 ttl=101 time=356 ms
+730 bytes from brora.ed.ac.uk (129.215.97.67): icmp_seq=19 ttl=101 time=374 ms
+730 bytes from brora.ed.ac.uk (129.215.97.67): icmp_seq=20 ttl=101 time=353 ms
+730 bytes from brora.ed.ac.uk (129.215.97.67): icmp_seq=21 ttl=101 time=318 ms
+730 bytes from brora.ed.ac.uk (129.215.97.67): icmp_seq=22 ttl=101 time=292 ms
+730 bytes from brora.ed.ac.uk (129.215.97.67): icmp_seq=23 ttl=101 time=373 ms
+730 bytes from brora.ed.ac.uk (129.215.97.67): icmp_seq=24 ttl=101 time=391 ms
+730 bytes from brora.ed.ac.uk (129.215.97.67): icmp_seq=25 ttl=101 time=292 ms
+730 bytes from brora.ed.ac.uk (129.215.97.67): icmp_seq=26 ttl=101 time=330 ms
+730 bytes from brora.ed.ac.uk (129.215.97.67): icmp_seq=27 ttl=101 time=352 ms
+730 bytes from brora.ed.ac.uk (129.215.97.67): icmp_seq=28 ttl=101 time=381 ms
+730 bytes from brora.ed.ac.uk (129.215.97.67): icmp_seq=29 ttl=101 time=302 ms
+730 bytes from brora.ed.ac.uk (129.215.97.67): icmp_seq=30 ttl=101 time=305 ms
+730 bytes from brora.ed.ac.uk (129.215.97.67): icmp_seq=31 ttl=101 time=295 ms
+730 bytes from brora.ed.ac.uk (129.215.97.67): icmp_seq=32 ttl=101 time=299 ms
+730 bytes from brora.ed.ac.uk (129.215.97.67): icmp_seq=33 ttl=101 time=393 ms
+730 bytes from brora.ed.ac.uk (129.215.97.67): icmp_seq=34 ttl=101 time=289 ms
+730 bytes from brora.ed.ac.uk (129.215.97.67): icmp_seq=35 ttl=101 time=289 ms
+730 bytes from brora.ed.ac.uk (129.215.97.67): icmp_seq=36 ttl=101 time=292 ms
+730 bytes from brora.ed.ac.uk (129.215.97.67): icmp_seq=37 ttl=101 time=383 ms
+730 bytes from brora.ed.ac.uk (129.215.97.67): icmp_seq=38 ttl=101 time=357 ms
+730 bytes from brora.ed.ac.uk (129.215.97.67): icmp_seq=39 ttl=101 time=325 ms
+730 bytes from brora.ed.ac.uk (129.215.97.67): icmp_seq=40 ttl=101 time=351 ms
+730 bytes from brora.ed.ac.uk (129.215.97.67): icmp_seq=41 ttl=101 time=374 ms
+730 bytes from brora.ed.ac.uk (129.215.97.67): icmp_seq=42 ttl=101 time=397 ms
+730 bytes from brora.ed.ac.uk (129.215.97.67): icmp_seq=43 ttl=101 time=296 ms
+730 bytes from brora.ed.ac.uk (129.215.97.67): icmp_seq=44 ttl=101 time=289 ms
+730 bytes from brora.ed.ac.uk (129.215.97.67): icmp_seq=45 ttl=101 time=290 ms
+730 bytes from brora.ed.ac.uk (129.215.97.67): icmp_seq=46 ttl=101 time=384 ms
+730 bytes from brora.ed.ac.uk (129.215.97.67): icmp_seq=47 ttl=101 time=407 ms
+730 bytes from brora.ed.ac.uk (129.215.97.67): icmp_seq=48 ttl=101 time=331 ms
+730 bytes from brora.ed.ac.uk (129.215.97.67): icmp_seq=49 ttl=101 time=353 ms
+730 bytes from brora.ed.ac.uk (129.215.97.67): icmp_seq=50 ttl=101 time=378 ms
+
+--- ed.ac.uk ping statistics ---
+50 packets transmitted, 50 received, 0% packet loss, time 49044ms
+rtt min/avg/max/mdev = 288.637/340.107/415.852/41.395 ms
