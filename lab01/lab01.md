@@ -5,16 +5,18 @@
 **Output for q2**
 ![Output](./lab01-q2.png)
 
-1. [www.google.co.uk](www.google.co.uk) is reachable
-2. [www.columbia.edu](www.columbia.edu) is reachable
-3. [www.wikipedia.org](www.wikipedia.org) is reachable
-4. [ec.ho](ec.ho) is NOT reachable. This is because the DNS(link) does not not exist. This is confirmed with the browser
-5. [hhh.gs](hhh.gs) is reachable.
-6. defence.gov.au is reachable. However, the reply packet is absent, yet the link is accessible via browser
-7. [yes.no](yes.no) is reachable
-8. [one.one.one.one](one.one.one.one) is reachable
-9. [theguardian.com](theguardian.com) is reachable
-10. [xn--i-7iq.ws](xn--i-7iq.ws) is reachable
+| URL                                           | Reachable by ping        | Reachable by Web |
+| --------------------------------------------- | ------------------------ | ---------------- |
+| [www.google.co.uk](http://www.google.co.uk)   | Is reachable       | Yes              |
+| [www.columbia.edu](http://www.columbia.edu)   | is reachable             | Yes              |
+| [www.wikipedia.org](http://www.wikipedia.org) | is reachable             | Yes              |
+| ec.ho                                         | is NOT reachable.        | NO               |
+| [hhh.gs](http://hhh.gs)                       | is reachable.            | Yes              |
+| [defence.gov.au](http://defence.gov.au)       | is not reachable by ping | Yes              |
+| [yes.no](http://yes.no)                       | is reachable             | Yes              |
+| one.one.one.one                               | is reachable             | Yes              |
+| [theguardian.com](http://theguardian.com)     | is reachable             | Yes              |
+| [xn--i-7iq.ws](http://xn--i-7iq.ws)           | is reachable             | Yes              |
 
 ## Q3
 
@@ -24,7 +26,7 @@
 
 #### i)
 
-There are 17 routers along the path to the [usi.ch](usi.ch)
+There are 16 routers along the path to the [usi.ch](usi.ch). (excluding the destination router)
 
 #### ii)
 
@@ -274,15 +276,20 @@ Standard routers appear if the IP address has not been translated. This is the c
 
 ## Q4)
 
-### Data:
+### Data
 
-#### <http://cdu.edu.au>:
+#### <http://cdu.edu.au>
+
 #### Delay vs Time and Packet Number
+
 ![](/lab01/data/cdu-edu-au/cdu-edu-delay.png)
+
 #### Delay vs. Packet Size
+
 ![](/lab01/data/cdu-edu-au/cdu-edu-scatter.png)
 
 #### Average and Min delay for packet size
+
 | Packet-Size | Avg    | Min    |
 | ----------- | ------ | ------ |
 | 50          | 71.14  | 61.694 |
@@ -293,13 +300,18 @@ Standard routers appear if the IP address has not been translated. This is the c
 | 1250        | 67.948 | 62.787 |
 | 1500        | 69.891 | 62.854 |
 
-#### <http://usp.br>:
+#### <http://usp.br>
+
 #### Delay vs Time and Packet Number
+
 ![](/lab01/data/usp/usp-delay.png)
+
 #### Delay vs. Packet Size
+
 ![](/lab01/data/usp/usp-scatter.png)
 
 #### Average and Min delay for packet size
+
 | Packet-Size | Avg     | Min     |
 | ----------- | ------- | ------- |
 | 50          | 392.834 | 334.572 |
@@ -310,15 +322,18 @@ Standard routers appear if the IP address has not been translated. This is the c
 | 1250        | 397.085 | 335.352 |
 | 1500        | 395.499 | 333.484 |
 
+#### <http://ed.ac.uk>
 
-
-#### <http://ed.ac.uk>:
 #### Delay vs Time and Packet Number
+
 ![](/lab01/data/ed-ac-uk/ed-ac-uk-delay.png)
+
 #### Delay vs. Packet Size
+
 ![](/lab01/data/ed-ac-uk/ed-ac-uk-scatter.png)
 
 #### Average and Min delay for packet size
+
 | Packet-Size | Avg     | Min     |
 | ----------- | ------- | ------- |
 | 50          | 350.898 | 284.239 |
@@ -328,9 +343,6 @@ Standard routers appear if the IP address has not been translated. This is the c
 | 1000        | 339.109 | 286.988 |
 | 1250        | 357.529 | 289.484 |
 | 1500        | 339.793 | 284.49  |
-
-
-
 
 ### a)
 
