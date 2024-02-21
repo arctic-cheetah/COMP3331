@@ -1,6 +1,8 @@
 # Lab01
 
-## Q2
+Disclaimer: THIS WAS EXERCISE WAS COMPLETED WITH MY HOME INTERNET.
+
+## Exercise 2
 
 **Output for q2**
 ![Output](./lab01-q2.png)
@@ -10,44 +12,45 @@
 | [www.google.co.uk](http://www.google.co.uk)   | Is reachable       | Yes              |
 | [www.columbia.edu](http://www.columbia.edu)   | is reachable             | Yes              |
 | [www.wikipedia.org](http://www.wikipedia.org) | is reachable             | Yes              |
-| ec.ho                                         | is NOT reachable.        | NO               |
+| ec.ho                                         | is NOT reachable.  DNS non-e      | NO               |
 | [hhh.gs](http://hhh.gs)                       | is reachable.            | Yes              |
-| [defence.gov.au](http://defence.gov.au)       | is not reachable by ping | Yes              |
+| [defence.gov.au](http://defence.gov.au)       | NOT reachable by ping. Firewall blocks ICMP packet| Yes              |
 | [yes.no](http://yes.no)                       | is reachable             | Yes              |
 | one.one.one.one                               | is reachable             | Yes              |
 | [theguardian.com](http://theguardian.com)     | is reachable             | Yes              |
 | [xn--i-7iq.ws](http://xn--i-7iq.ws)           | is reachable             | Yes              |
 
-## Q3
+## Exercise 3
 
-### a)
+### 3.1)
 
 ![Output](./lab01-q3a.png)
 
-#### i)
+#### 3.1.1)
 
-There are 16 routers along the path to the [usi.ch](usi.ch). (excluding the destination router)
+There are 17 routers along the path to the [usi.ch](usi.ch) from my home internet.
 
-#### ii)
+From UNSW
+
+#### 3.1.2)
 
 The first international router outside of Australia is Singapore as seen from `geoiplookup` and the website geolocater [ipregistery.co](ipregistery.co)
 
 ![output](./lab01-q3-iiii.png)
 
-#### iii)
+#### 3.1.3)
 
 The first EU router is number 10. Which is ip4.gtt.net (154.14.130.98).
 ![output](./lab01-q3-v.png)
 
-### b)
+### 3.2)
 
-#### i)
+#### 3.2.1)
 
-The last routers that the routes have in common is #3 with IP address: 202.90.206.100
+The last routers that the paths have in common is router #3 with IP address: 202.90.206.100
 
 ```
 Testing Link #1: 
-
 
 traceroute to jhu.edu (128.220.192.230), 30 hops max, 60 byte packets
  1  192.168.0.1 (192.168.0.1)  15.191 ms  21.288 ms  27.416 ms
@@ -150,13 +153,13 @@ traceroute to ed.ac.uk (129.215.235.217), 30 hops max, 60 byte packets
 Further information about this router reveals my Internet Service Provider with SuperLoop. It is apparently located in Brisbane
 ![output](./lab01-q3-bii.png)
 
-#### ii)
+#### 3.2.2)
 
 Hop count and physical distance is weakly correlated. Since the hop count to Edinburgh is lower than to New York, despite New York being closer to Sydney.
 
 However, it also seems that the hop count to Sau Paulo is the lowest but only by a small amount when compared to Edinburgh.
 
-Ultimately, hop count and physical distance must be weakly correlated as there must be other factors that contribute to varying hop count. (Scepticism is required here because the sample size is small)
+Ultimately, hop count and physical distance must be weakly correlated as there must be other factors that contribute to varying hop count such as queuing or transmission delay, etc. (Scepticism is required here because the sample size is small)
 
 | # | Link     | Hops | Location  | Euclidean Distance from Sydney(km) |
 |---|----------|------|-----------|------------------------------------|
@@ -164,11 +167,11 @@ Ultimately, hop count and physical distance must be weakly correlated as there m
 | 2 | usp.br   | 18   | Sao Paulo | 14,235                             |
 | 3 | ed.ac.uk | 20   | Edinburgh | 17,006                             |
 
-### c)
+### 3.3)
 
-#### i)
+#### 3.3.1)
 
-My public ip address is as follows:
+My public public ip address is 116.255.12.95 as follows:
 ![output](./lab01-q3-ci.png)
 
 ##### Output from [https://www.net.princeton.edu/traceroute.html](https://www.net.princeton.edu/traceroute.html) to my IP address
@@ -186,7 +189,7 @@ IP address of the selected links:
 | <https://www.as13030.net>       | 213.144.137.198 |
 |                               |                 |
 
-##### My output to 128.112.128.55
+##### My output to [www.net.princeton.edu](128.112.128.55)
 
 ```
 Testing Link #1: 
@@ -222,7 +225,7 @@ ________________________________________________________________________________
 
 ```
 
-##### My output to 213.144.137.198
+##### My output to [www.as13030.net](213.144.137.198)
 
 ```
 Testing Link #2: 
@@ -262,7 +265,7 @@ traceroute to 213.144.137.198 (213.144.137.198), 30 hops max, 60 byte packets
 ________________________________________________________________________________________
 ```
 
-#### ii)
+#### 3.3.2)
 
 The paths of the reverse and forward route are different.
 
@@ -270,11 +273,11 @@ Albeit, as seen above the reverse route goes through some similar routers with t
 
 Something to note is the close proximity of the IP addresses for <https://init.7>, which may imply a server hosting many machines to achieve this.
 
-#### iii)
+#### 3.3.3)
 
 Standard routers appear if the IP address has not been translated. This is the case with <https://www.net.princeton.edu/traceroute.html> . However, it appears with the  <https://init.7> and my SuperLoop ISP have used a translated IP (NAT Gateway) which may explain why the terminating IP addresses are different.
 
-## Q4)
+## Exercise 4
 
 ### Data
 
@@ -282,11 +285,11 @@ Standard routers appear if the IP address has not been translated. This is the c
 
 #### Delay vs Time and Packet Number
 
-![](/lab01/data/cdu-edu-au/cdu-edu-delay.png)
+![img](/lab01/data/cdu-edu-au/cdu-edu-delay.png)
 
 #### Delay vs. Packet Size
 
-![](/lab01/data/cdu-edu-au/cdu-edu-scatter.png)
+![img](/lab01/data/cdu-edu-au/cdu-edu-scatter.png)
 
 #### Average and Min delay for packet size
 
@@ -304,11 +307,11 @@ Standard routers appear if the IP address has not been translated. This is the c
 
 #### Delay vs Time and Packet Number
 
-![](/lab01/data/usp/usp-delay.png)
+![img](/lab01/data/usp/usp-delay.png)
 
 #### Delay vs. Packet Size
 
-![](/lab01/data/usp/usp-scatter.png)
+![img](/lab01/data/usp/usp-scatter.png)
 
 #### Average and Min delay for packet size
 
@@ -326,11 +329,11 @@ Standard routers appear if the IP address has not been translated. This is the c
 
 #### Delay vs Time and Packet Number
 
-![](/lab01/data/ed-ac-uk/ed-ac-uk-delay.png)
+![img](/lab01/data/ed-ac-uk/ed-ac-uk-delay.png)
 
 #### Delay vs. Packet Size
 
-![](/lab01/data/ed-ac-uk/ed-ac-uk-scatter.png)
+![img](/lab01/data/ed-ac-uk/ed-ac-uk-scatter.png)
 
 #### Average and Min delay for packet size
 
@@ -344,7 +347,7 @@ Standard routers appear if the IP address has not been translated. This is the c
 | 1250        | 357.529 | 289.484 |
 | 1500        | 339.793 | 284.49  |
 
-### a)
+### 4.1)
 
 | Link                            | Location  | Euclidean Distance from Sydney(km) | Time to Destination(s) | Time to destination (ms) | Speed of light (m/s)  | 300000000 |
 | ------------------------------- | --------- | ---------------------------------- | ---------------------- | ------------------------ | --------------------- | --------- |
@@ -352,24 +355,24 @@ Standard routers appear if the IP address has not been translated. This is the c
 | [usp.br](http://usp.br)         | Sao Paulo | 14,235                             | 0.04745                | 47.45                    |                       |           |
 | [ed.ac.uk](http://ed.ac.uk)     | Edinburgh | 17,006                             | 0.05668666667          | 56.68666667              |                       |           |
 
-### b)
+### 4.2)
 
 ![output](./Figure_1.png)
 
-### c)
+### 4.3)
 
 Possible reasons that the y-axis is greater than two are:
 
 1) Transmission delay incurred along the route because each node(router) needs to manage other packets.
 2) Propogation speed of a packet is not actually $3*10^8 m/s$. It is more closer to $2*10^8 m/s$ because the speed of light (a packet) will travel slower in fibre optic (a different material)
 3) Possible Processing and Queuing delay from individual routers as they will be managing other packets
-4) The Round Trip Time (RTT) represents at least twice the time of the minimum time taken, because it requires going forwards and returning from the destination
+4) ISP level routing may lead to paths that actually have higher delay
 
-### d)
+### 4.4)
 
-Delay to the destination will vary over time. This is because the nodes/routers to the destination will have manage other packets and this means that factors such as processing, queueing and transmission time will also wildy vary.
+Delay to the destination will vary over time. This is because the nodes/routers to the destination will have manage other packets and this means that factors such as processing, queueing and transmission time will also wildy vary. As such, each time a packet is sent to the destination it's RTT will vary.
 
-### e)
+### 4.5)
 
 | # | Delay type   | Definition                                                            | Formula |
 |---|--------------|-----------------------------------------------------------------------|---------|
@@ -388,4 +391,8 @@ $d$ = The distance between two nodes (routers)
 
 $v$ = The speed of light in a physical medium
 
-Therefore, only transmission delay depends on the size of the packet $L$. The others do not.
+Transmission delay depends on the size of the packet $L$.
+
+Processing delay can also depend on the packet size but to a smaller degree than transmission delay as it is in the order of microseconds[Computer Networking. Kurose page 64] and much smaller than a transmission delay.
+
+The others do not.

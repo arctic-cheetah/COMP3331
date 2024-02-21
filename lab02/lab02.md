@@ -23,11 +23,13 @@ The connection between the browser and server is persistent. We can conclude thi
 ### 3.4) How many bytes of content are being returned to the browser?
 
 73 bytes of html content is returned:
+
 ![img](./lab02-q3-4.png)
 
 ### 3.5) What is the data contained inside the HTTP response packet?
 
 The data inside the HTTP packet is a HTML file.
+
 ![img](./lab02-q3-5.png)
 
 ## Exercise 4
