@@ -30,7 +30,45 @@ Disclaimer: THIS WAS EXERCISE WAS COMPLETED WITH MY HOME INTERNET.
 
 There are 17 routers along the path to the [usi.ch](usi.ch) from my home internet.
 
-From UNSW
+For UNSW, last UNSW router is router #5 (172.17.17.102). However, hop #3 may be concealed or blocked by a firewall. And hop #4 may be a virtual router on the same physical router. Therefore, the number of **PHYSICAL UNSW ROUTERS** is 3.
+```
+ 1  cserouter1-trusted.orchestra.cse.unsw.EDU.AU (129.94.208.251)  0.258 ms  0.156 ms  0.134 ms
+ 2  129.94.39.17 (129.94.39.17)  0.982 ms  1.020 ms  0.956 ms
+ 3  * * *
+ 4  172.17.17.9 (172.17.17.9)  1.190 ms 172.17.17.45 (172.17.17.45)  1.435 ms 172.17.17.9 (172.17.17.9)  1.153 ms
+ 5  172.17.17.102 (172.17.17.102)  4.096 ms  4.085 ms 172.17.17.110 (172.17.17.110)  4.089 ms
+ 6  138.44.5.0 (138.44.5.0)  16.233 ms  14.831 ms  14.752 ms
+ 7  et-1-1-0.pe1.rsby.nsw.aarnet.net.au (113.197.15.12)  1.764 ms  1.808 ms  1.783 ms
+ 8  xe-1-1-0.pe1.eskp.nsw.aarnet.net.au (113.197.15.199)  3.321 ms  3.197 ms  3.178 ms
+ 9  et-0-3-0.pe1.prka.sa.aarnet.net.au (113.197.15.42)  20.299 ms  20.213 ms  20.196 ms
+10  et-0-3-0.pe1.knsg.wa.aarnet.net.au (113.197.15.45)  46.248 ms  46.174 ms  45.969 ms
+11  et-1_0_5.bdr1.sing.sin.aarnet.net.au (113.197.15.231)  92.426 ms  92.614 ms  92.506 ms
+12  138.44.226.7 (138.44.226.7)  256.352 ms  256.422 ms  256.315 ms
+13  ae2.mx1.lon2.uk.geant.net (62.40.98.65)  272.069 ms  271.894 ms  271.786 ms
+14  ae8.mx1.par.fr.geant.net (62.40.98.107)  263.617 ms  263.569 ms  263.309 ms
+15  ae7.mx1.gen.ch.geant.net (62.40.98.238)  271.353 ms  271.193 ms  271.076 ms
+16  swice1-100ge-0-3-0-1.switch.ch (62.40.124.22)  273.588 ms  274.746 ms  272.978 ms
+17  swiLG2-400GE-0-0-0-0.switch.ch (130.59.38.70)  276.485 ms  276.605 ms  278.114 ms
+18  swiLG1-B1.switch.ch (130.59.36.77)  275.449 ms  274.842 ms  274.952 ms
+19  lu-pop1-bkb02-100g-1-0-48.usi.ch (195.176.176.210)  274.932 ms  275.084 ms  275.181 ms
+20  ma-pop1-dcfw01.net.ti-edu.ch (195.176.176.34)  274.961 ms  274.938 ms  275.452 ms
+21  selenio.ti-edu.ch (195.176.55.64)  276.089 ms  275.713 ms  276.151 ms
+```
+
+```
+% Information related to '138.44.5.0/24AS7575'
+
+route:          138.44.5.0/24
+origin:         AS7575
+descr:          Australian Academic and Research Network
+                Building 9
+                Banks Street
+mnt-by:         MAINT-AARNET-AP
+last-modified:  2019-04-03T03:55:51Z
+source:         APNIC
+```
+
+
 
 #### 3.1.2)
 
