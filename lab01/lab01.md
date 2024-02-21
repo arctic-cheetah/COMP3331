@@ -31,6 +31,7 @@ Disclaimer: THIS WAS EXERCISE WAS COMPLETED WITH MY HOME INTERNET.
 There are 17 routers along the path to the [usi.ch](usi.ch) from my home internet.
 
 For UNSW, last UNSW router is router #5 (172.17.17.102). However, hop #3 may be concealed or blocked by a firewall. And hop #4 may be a virtual router on the same physical router. Therefore, the number of **PHYSICAL UNSW ROUTERS** is 3.
+
 ```
  1  cserouter1-trusted.orchestra.cse.unsw.EDU.AU (129.94.208.251)  0.258 ms  0.156 ms  0.134 ms
  2  129.94.39.17 (129.94.39.17)  0.982 ms  1.020 ms  0.956 ms
@@ -55,6 +56,8 @@ For UNSW, last UNSW router is router #5 (172.17.17.102). However, hop #3 may be 
 21  selenio.ti-edu.ch (195.176.55.64)  276.089 ms  275.713 ms  276.151 ms
 ```
 
+![](./lab01-q3-bi2.png)
+
 ```
 % Information related to '138.44.5.0/24AS7575'
 
@@ -67,8 +70,6 @@ mnt-by:         MAINT-AARNET-AP
 last-modified:  2019-04-03T03:55:51Z
 source:         APNIC
 ```
-
-
 
 #### 3.1.2)
 
