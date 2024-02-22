@@ -45,6 +45,7 @@ public class PingClient {
         synchronized (socket) {
             // Send 20 UDP packets
             for (int i = 0; i < PING_TIMES; i += 1) {
+                // Send a UDP packet
                 Message message = new Message(start, new Date());
                 DatagramPacket txPacket = new DatagramPacket(message.toBytes(), BUFFER_SIZE, serverIP, serverPort);
                 socket.send(txPacket);
@@ -53,10 +54,9 @@ public class PingClient {
                 DatagramPacket rxPacket = new DatagramPacket(new byte[BUFFER_SIZE], BUFFER_SIZE);
                 try {
                     socket.receive(rxPacket);
-                    long rxTime = (new Date()).getTime();
-                    long rtt = rxTime - message.getSendTime();
-                    tripTimeData.add(rtt);
-                    // TODO : print ping to 127.0.0.1, seq = 50215, rtt = 120 ms
+                    long rtt = calculateRTT(tripTimeData, message);
+
+                    // print as shown: ping to 127.0.0.1, seq = 50215, rtt = 120 ms
                     System.out.println("ping to " + txPacket.getAddress().getHostAddress() + ", seq = "
                             + message.getSequence() + ", rtt = " + rtt);
                 } catch (Exception e) {
@@ -70,15 +70,20 @@ public class PingClient {
                 }
             }
             System.out.println("-----------------------------------------------\n");
-
         }
         // Calculate Packet RTT min, max, avg
-        calculateRTT(tripTimeData);
-
+        RTTStats(tripTimeData);
         return socket;
     }
 
-    private static void calculateRTT(ArrayList<Long> tripTimeData) {
+    private static long calculateRTT(ArrayList<Long> tripTimeData, Message message) {
+        long rxTime = (new Date()).getTime();
+        long rtt = rxTime - message.getSendTime();
+        tripTimeData.add(rtt);
+        return rtt;
+    }
+
+    private static void RTTStats(ArrayList<Long> tripTimeData) {
         Integer tripTimeSum = tripTimeData.stream().map(e -> e.intValue()).reduce(Integer::sum).orElse(-1);
         Double averageTime = (double) tripTimeSum / tripTimeData.size();
         Integer minTime = tripTimeData.stream().map(e -> e.intValue()).min(Integer::compare).orElse(0);
