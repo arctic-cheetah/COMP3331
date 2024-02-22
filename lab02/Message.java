@@ -4,9 +4,10 @@ import java.util.Date;
 // Message payload
 
 public class Message {
-    public String keyword = "PING";
-    public Integer sequence = -1;
-    public Long timeStamp = null;
+    private String keyword = "PING";
+    private Integer sequence = -1;
+
+    private Long timeStamp = null; // Sending time
 
     public Message(Integer sequence, Date date) {
         this.sequence = sequence;
@@ -15,10 +16,24 @@ public class Message {
 
     // Convert message to byte array
     public byte[] toBytes() {
+        // Format the message as required by the lab
+        // <PING> <sequence_number> <time> <CRLF>
         ByteBuffer b = ByteBuffer.allocate(PingClient.BUFFER_SIZE);
         b.put(keyword.getBytes());
-        b.putInt(this.sequence);
-        b.putLong(timeStamp);
+        b.put(" ".getBytes());
+        b.put(this.sequence.toString().getBytes());
+        b.put(" ".getBytes());
+        b.put(timeStamp.toString().getBytes());
+        b.put("\r\n".getBytes());
         return b.array();
     }
+
+    public Long getSendTime() {
+        return timeStamp;
+    }
+
+    public Integer getSequence() {
+        return sequence;
+    }
+
 }

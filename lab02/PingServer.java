@@ -31,7 +31,7 @@ public class PingServer {
       // Processing loop.
       while (true) {
          // Create a datagram packet to hold incomming UDP packet.
-         DatagramPacket request = new DatagramPacket(new byte[1024], 1024);
+         DatagramPacket request = new DatagramPacket(new byte[PingClient.BUFFER_SIZE], PingClient.BUFFER_SIZE);
 
          // Block until the host receives a UDP packet.
          socket.receive(request);
@@ -47,6 +47,7 @@ public class PingServer {
 
          // Simulate network delay.
          Thread.sleep((int) (random.nextDouble() * 2 * AVERAGE_DELAY));
+         // Thread.sleep((int) (700));
 
          // Send reply.
          InetAddress clientHost = request.getAddress();

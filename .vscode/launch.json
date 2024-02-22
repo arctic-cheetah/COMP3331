@@ -6,6 +6,14 @@
     "configurations": [
         {
             "type": "java",
+            "name": "PingClient",
+            "request": "launch",
+            "mainClass": "PingClient",
+            "projectName": "COMP3331_40577931",
+            "args": "127.0.0.1 25565"
+        },
+        {
+            "type": "java",
             "name": "PingServer",
             "request": "launch",
             "mainClass": "PingServer",
