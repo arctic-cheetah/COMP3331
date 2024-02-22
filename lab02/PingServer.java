@@ -8,13 +8,11 @@ import java.util.*;
  * When a packet comes in, the server simply sends the encapsulated data back to the client.
  */
 
-public class PingServer
-{
+public class PingServer {
    private static final double LOSS_RATE = 0.3;
-   private static final int AVERAGE_DELAY = 100;  // milliseconds
+   private static final int AVERAGE_DELAY = 100; // milliseconds
 
-   public static void main(String[] args) throws Exception
-   {
+   public static void main(String[] args) throws Exception {
       // Get command line argument.
       if (args.length != 1) {
          System.out.println("Required arguments: port");
@@ -22,7 +20,7 @@ public class PingServer
       }
       int port = Integer.parseInt(args[0]);
 
-      // Create random number generator for use in simulating 
+      // Create random number generator for use in simulating
       // packet loss and network delay.
       Random random = new Random();
 
@@ -37,14 +35,14 @@ public class PingServer
 
          // Block until the host receives a UDP packet.
          socket.receive(request);
-         
+
          // Print the recieved data.
          printData(request);
 
          // Decide whether to reply, or simulate packet loss.
          if (random.nextDouble() < LOSS_RATE) {
             System.out.println("   Reply not sent.");
-            continue; 
+            continue;
          }
 
          // Simulate network delay.
@@ -61,11 +59,10 @@ public class PingServer
       }
    }
 
-   /* 
+   /*
     * Print ping data to the standard output stream.
     */
-   private static void printData(DatagramPacket request) throws Exception
-   {
+   private static void printData(DatagramPacket request) throws Exception {
       // Obtain references to the packet's array of bytes.
       byte[] buf = request.getData();
 
@@ -79,7 +76,7 @@ public class PingServer
 
       // Wrap the input stream reader in a bufferred reader,
       // so you can read the character data a line at a time.
-      // (A line is a sequence of chars terminated by any combination of \r and \n.) 
+      // (A line is a sequence of chars terminated by any combination of \r and \n.)
       BufferedReader br = new BufferedReader(isr);
 
       // The message data is contained in a single line, so read this line.
@@ -87,9 +84,9 @@ public class PingServer
 
       // Print host address and data received from it.
       System.out.println(
-         "Received from " + 
-         request.getAddress().getHostAddress() + 
-         ": " +
-         new String(line) );
+            "Received from " +
+                  request.getAddress().getHostAddress() +
+                  ": " +
+                  new String(line));
    }
 }
