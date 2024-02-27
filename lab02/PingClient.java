@@ -86,6 +86,8 @@ public class PingClient {
     private static void RTTStats(ArrayList<Long> tripTimeData) {
         Integer tripTimeSum = tripTimeData.stream().map(e -> e.intValue()).reduce(Integer::sum).orElse(-1);
         Double averageTime = (double) tripTimeSum / tripTimeData.size();
+        // int tmpMin = tripTimeData.stream().mapToInt(Long::intValue).min().orElse(-1);
+
         Integer minTime = tripTimeData.stream().map(e -> e.intValue()).min(Integer::compare).orElse(0);
         Integer maxTime = tripTimeData.stream().map(e -> e.intValue()).max(Integer::compare).orElse(0);
         System.out.print("minimum = " + minTime + " , ");
