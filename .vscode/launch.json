@@ -4,9 +4,10 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
         {
             "type": "java",
-            "name": "PingClient",
+            "name": "PingClient.java",
             "request": "launch",
             "mainClass": "PingClient",
             "projectName": "COMP3331_40577931",
@@ -14,7 +15,7 @@
         },
         {
             "type": "java",
-            "name": "PingServer",
+            "name": "PingServer.java",
             "request": "launch",
             "mainClass": "PingServer",
             "projectName": "COMP3331_40577931",
@@ -25,6 +26,13 @@
             "request": "launch",
             "name": "Bash-Debug (simplest configuration)",
             "program": "${file}"
-        }
+        },
+        {
+            "type": "debugpy",
+            "name": "PingClient.py",
+            "program": "${file}",
+            "request": "launch",
+            "args": "127.0.0.1 25565"
+        },
     ]
 }
