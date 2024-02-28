@@ -86,6 +86,7 @@ The first EU router is number 13. Which is ae2.mx1.lon2.uk.geant.net (62.40.98.6
 
 #### 3.2.1)
 
+Disclaimer, UNSW's physical wifi routers contain internal/NAT routing. This means router 5 can be excluded. This means the last common router they have in common is router #7 (138.44.5.0).
 The last routers that the paths have in common is router #3 with IP address: 202.90.206.100
 
 ```
@@ -197,28 +198,96 @@ ________________________________________________________________________________
 
 ```
 
-Further information about this router reveals my Internet Service Provider with SuperLoop. It is apparently located in Brisbane
-![output](./lab01-q3-bii.png)
+Further information about this router reveals that
+
+```
+whois 138.44.5.0
+
+#
+# ARIN WHOIS data and services are subject to the Terms of Use
+# available at: https://www.arin.net/resources/registry/whois/tou/
+#
+# If you see inaccuracies in the results, please report at
+# https://www.arin.net/resources/registry/whois/inaccuracy_reporting/
+#
+# Copyright 1997-2024, American Registry for Internet Numbers, Ltd.
+#
+
+
+NetRange:       138.44.0.0 - 138.44.255.255
+CIDR:           138.44.0.0/16
+NetName:        APNIC-ERX-138-44-0-0
+NetHandle:      NET-138-44-0-0-1
+Parent:         NET138 (NET-138-0-0-0-0)
+NetType:        Early Registrations, Transferred to APNIC
+OriginAS:       
+Organization:   Asia Pacific Network Information Centre (APNIC)
+RegDate:        2003-12-11
+Updated:        2009-10-08
+Comment:        This IP address range is not registered in the ARIN database.
+Comment:        This range was transferred to the APNIC Whois Database as
+Comment:        part of the ERX (Early Registration Transfer) project.
+Comment:        For details, refer to the APNIC Whois Database via
+Comment:        WHOIS.APNIC.NET or http://wq.apnic.net/apnic-bin/whois.pl
+Comment:        
+Comment:        ** IMPORTANT NOTE: APNIC is the Regional Internet Registry
+Comment:        for the Asia Pacific region.  APNIC does not operate networks
+Comment:        using this IP address range and is not able to investigate
+Comment:        spam or abuse reports relating to these addresses.  For more
+Comment:        help, refer to http://www.apnic.net/apnic-info/whois_search2/abuse-and-spamming
+Ref:            https://rdap.arin.net/registry/ip/138.44.0.0
+
+ResourceLink:  http://wq.apnic.net/whois-search/static/search.html
+ResourceLink:  whois.apnic.net
+
+
+OrgName:        Asia Pacific Network Information Centre
+OrgId:          APNIC
+Address:        PO Box 3646
+City:           South Brisbane
+StateProv:      QLD
+PostalCode:     4101
+Country:        AU
+RegDate:        
+Updated:        2012-01-24
+Ref:            https://rdap.arin.net/registry/entity/APNIC
+
+ReferralServer:  whois://whois.apnic.net
+ResourceLink:  http://wq.apnic.net/whois-search/static/search.html
+
+OrgTechHandle: AWC12-ARIN
+OrgTechName:   APNIC Whois Contact
+OrgTechPhone:  +61 7 3858 3188 
+OrgTechEmail:  search-apnic-not-arin@apnic.net
+OrgTechRef:    https://rdap.arin.net/registry/entity/AWC12-ARIN
+
+OrgAbuseHandle: AWC12-ARIN
+OrgAbuseName:   APNIC Whois Contact
+OrgAbusePhone:  +61 7 3858 3188 
+OrgAbuseEmail:  search-apnic-not-arin@apnic.net
+OrgAbuseRef:    https://rdap.arin.net/registry/entity/AWC12-ARIN
+
+```
 
 #### 3.2.2)
 
-Hop count and physical distance is weakly correlated. Since the hop count to Edinburgh is lower than to New York, despite New York being closer to Sydney.
+Hop count and physical distance is weakly correlated. Since the hop count to Sao Paulo is the same to Edinburgh despite Sau Paulo being closer to Sydney.
 
-However, it also seems that the hop count to Sau Paulo is the lowest but only by a small amount when compared to Edinburgh.
+Additionally, the difference in hopcount between New York and Sau paulo and Edin burgh is close (by 3).
 
 Ultimately, hop count and physical distance must be weakly correlated as there must be other factors that contribute to varying hop count such as queuing or transmission delay, etc. (Scepticism is required here because the sample size is small)
 
 | # | Link     | Hops | Location  | Euclidean Distance from Sydney(km) |
 |---|----------|------|-----------|------------------------------------|
-| 1 | jhu.edu  | 21   | New York  | 15,728                             |
-| 2 | usp.br   | 18   | Sao Paulo | 14,235                             |
-| 3 | ed.ac.uk | 20   | Edinburgh | 17,006                             |
+| 1 | jhu.edu  | 26   | New York  | 15,728                             |
+| 2 | usp.br   | 23   | Sao Paulo | 14,235                             |
+| 3 | ed.ac.uk | 23   | Edinburgh | 17,006                             |
 
 ### 3.3)
 
 #### 3.3.1)
 
-My public public ip address is 116.255.12.95 as follows:
+My public ip address is 116.255.12.95 as follows:
 ![output](./lab01-q3-ci.png)
 
 ##### Output from [https://www.net.princeton.edu/traceroute.html](https://www.net.princeton.edu/traceroute.html) to my IP address
@@ -227,7 +296,39 @@ My public public ip address is 116.255.12.95 as follows:
 
 ##### Output from <https://www.as13030.net> to my IP address
 
-![output](./lab01-q3-ciii.png)
+```
+traceroute to 129.94.8.22 (129.94.8.22), 30 hops max, 60 byte packets
+ 1  r2win7.core.init7.net (213.144.137.193) [AS13030]  1.147 ms  1.422 ms  1.813 ms
+ 2  r1win1.core.init7.net (5.180.134.125) [AS13030]  1.084 ms  1.268 ms  1.571 ms
+ 3  r1win7.core.init7.net (5.180.134.122) [AS13030]  1.041 ms  1.331 ms  1.722 ms
+ 4  r1win9.core.init7.net (5.180.135.25) [AS13030]  0.987 ms  1.165 ms  1.458 ms
+ 5  r1zrh10.core.init7.net (5.180.135.56) [AS13030]  1.463 ms  1.817 ms  2.327 ms
+ 6  r1glb3.core.init7.net (5.180.135.59) [AS13030]  1.222 ms  1.344 ms  1.517 ms
+ 7  r2zrh5.core.init7.net (5.180.135.69) [AS13030]  1.401 ms  1.767 ms  1.502 ms
+ 8  r2zrh2.core.init7.net (5.180.135.232) [AS13030]  5.543 ms  5.661 ms  6.131 ms
+ 9  r1fra3.core.init7.net (5.180.135.173) [AS13030]  7.163 ms  7.393 ms  7.861 ms
+10  xe-1-2-0.mpr1.fra4.de.above.net (80.81.194.26) [*]  7.128 ms  7.180 ms  7.173 ms
+11  * ae12.cs1.fra6.de.eth.zayo.com (64.125.26.172) [*]  139.900 ms  139.953 ms
+12  * * *
+13  * * *
+14  * * *
+15  * * *
+16  * * *
+17  * * *
+18  ae2.cs1.sea1.us.eth.zayo.com (64.125.29.26) [*]  139.880 ms  145.394 ms  145.382 ms
+19  ae27.mpr1.sea1.us.zip.zayo.com (64.125.29.1) [*]  139.715 ms  139.706 ms  139.697 ms
+20  64.125.193.130.i223.above.net (64.125.193.130) [*]  139.680 ms  139.668 ms  139.612 ms
+21  et-10-0-5.170.pe1.brwy.nsw.aarnet.net.au (113.197.15.62) [AS7575]  279.492 ms  279.439 ms  279.421 ms
+22  138.44.5.1 (138.44.5.1) [AS7575]  279.371 ms  279.389 ms  279.353 ms
+23  * * *
+24  * * *
+25  * * *
+26  * * *
+27  * * *
+28  * * *
+29  * * *
+30  * * *
+```
 
 IP address of the selected links:
 | Link                          | IP Address      |
@@ -239,35 +340,35 @@ IP address of the selected links:
 ##### My output to [www.net.princeton.edu](128.112.128.55)
 
 ```
-Testing Link #1: 
+Testing Link #1 : 128.112.128.55 
 
 
 traceroute to 128.112.128.55 (128.112.128.55), 30 hops max, 60 byte packets
- 1  192.168.0.1 (192.168.0.1)  3.304 ms  3.253 ms  3.225 ms
- 2  gateway.nsw.superloop.au (122.199.32.1)  13.004 ms  17.284 ms  17.259 ms
- 3  202.90.206.100 (202.90.206.100)  17.236 ms  17.211 ms  17.187 ms
- 4  Bundle-Ether31.bdr02-ipt-47bourke-syd.au.superloop.com (103.200.13.67)  171.438 ms  171.416 ms  171.390 ms
- 5  103.200.13.168 (103.200.13.168)  171.366 ms  171.345 ms  171.322 ms
- 6  ae7.er3.lax112.us.zip.zayo.com (64.124.204.201)  167.721 ms  169.392 ms  169.347 ms
- 7  ae1.cs1.lax112.us.eth.zayo.com (64.125.28.234)  169.325 ms  160.977 ms  160.932 ms
- 8  * * *
- 9  lsan0.tr-cps.internet2.edu (206.223.123.199)  171.397 ms  168.440 ms  169.764 ms
-10  fourhundredge-0-0-0-0.4079.core1.losa.net.internet2.edu (163.253.1.18)  241.399 ms  237.475 ms  241.261 ms
-11  fourhundredge-0-0-0-2.4079.core2.salt.net.internet2.edu (163.253.1.115)  237.342 ms  237.277 ms  236.843 ms
-12  fourhundredge-0-0-0-23.4079.core1.salt.net.internet2.edu (163.253.1.32)  235.586 ms fourhundredge-0-0-0-0.4079.core2.denv.net.internet2.edu (163.253.1.168)  240.552 ms  240.479 ms
-13  fourhundredge-0-0-0-0.4079.core1.denv.net.internet2.edu (163.253.1.170)  241.289 ms  241.116 ms  234.982 ms
-14  fourhundredge-0-0-0-0.4079.core1.kans.net.internet2.edu (163.253.1.243)  232.442 ms  228.669 ms  228.619 ms
-15  fourhundredge-0-0-0-3.4079.core2.chic.net.internet2.edu (163.253.1.244)  234.947 ms  235.354 ms  235.320 ms
-16  fourhundredge-0-0-0-3.4079.core2.eqch.net.internet2.edu (163.253.2.19)  243.913 ms  242.835 ms  238.887 ms
-17  fourhundredge-0-0-0-0.4079.core2.clev.net.internet2.edu (163.253.2.16)  238.835 ms  237.978 ms  237.925 ms
-18  fourhundredge-0-0-0-3.4079.core2.ashb.net.internet2.edu (163.253.1.138)  239.343 ms  237.192 ms  247.316 ms
-19  fourhundredge-0-0-0-1.4079.core1.phil.net.internet2.edu (163.253.1.137)  242.496 ms  237.738 ms  244.364 ms
-20  198.71.47.99 (198.71.47.99)  245.536 ms  229.349 ms  234.627 ms
-21  172-96-130.unassigned.userdns.com (172.96.130.54)  239.439 ms  234.492 ms  239.305 ms
-22  fw-border-87-router.princeton.edu (204.153.48.2)  232.358 ms  227.431 ms  243.333 ms
-23  rtr-core-east-router.princeton.edu (128.112.12.9)  234.012 ms  236.782 ms  233.528 ms
-24  core-ns-router.princeton.edu (128.112.12.226)  236.484 ms  235.197 ms  231.769 ms
-25  www.net.princeton.edu (128.112.128.55)  239.396 ms  237.406 ms  237.373 ms
+ 1  * * *
+ 2  irb-52686.kecd1-176q4-cbl-e1.gw.unsw.edu.au (172.17.30.178)  7.437 ms  7.552 ms  8.587 ms
+ 3  ae4-2702.cfw1.gw.unsw.edu.au (172.17.31.52)  3.059 ms  3.041 ms  2.300 ms
+ 4  irb-52710.kecd1-176q4-cbl-e1.gw.unsw.edu.au (172.17.31.114)  8.515 ms  8.498 ms  8.481 ms
+ 5  ae2-1907.kecd2-lg11c1-pbr-c1.gw.unsw.edu.au (172.17.17.45)  2.954 ms  2.938 ms ae2-1905.kecd1-1q16c3-pbr-c1.gw.unsw.edu.au (172.17.17.9)  2.921 ms
+ 6  172.17.17.110 (172.17.17.110)  2.903 ms  2.802 ms 172.17.17.102 (172.17.17.102)  2.046 ms
+ 7  138.44.5.0 (138.44.5.0)  6.510 ms  6.491 ms  6.472 ms
+ 8  et-1-1-0.pe1.mcqp.nsw.aarnet.net.au (113.197.15.4)  3.163 ms  3.064 ms  3.681 ms
+ 9  et-0_0_2.bdr1.guam.gum.aarnet.net.au (113.197.14.137)  72.765 ms  72.199 ms  73.247 ms
+10  138.44.228.5 (138.44.228.5)  187.279 ms  187.145 ms  188.028 ms
+11  fourhundredge-0-0-0-2.4079.core2.salt.net.internet2.edu (163.253.1.115)  249.426 ms  249.404 ms  249.388 ms
+12  fourhundredge-0-0-0-22.4079.core1.salt.net.internet2.edu (163.253.1.30)  248.568 ms  248.320 ms fourhundredge-0-0-0-0.4079.core2.denv.net.internet2.edu (163.253.1.168)  249.434 ms
+13  fourhundredge-0-0-0-0.4079.core1.denv.net.internet2.edu (163.253.1.170)  247.155 ms  248.664 ms  248.270 ms
+14  fourhundredge-0-0-0-0.4079.core1.kans.net.internet2.edu (163.253.1.243)  248.148 ms  307.285 ms  307.110 ms
+15  fourhundredge-0-0-0-3.4079.core2.chic.net.internet2.edu (163.253.1.244)  306.827 ms  291.939 ms  291.867 ms
+16  fourhundredge-0-0-0-3.4079.core2.eqch.net.internet2.edu (163.253.2.19)  291.827 ms  248.224 ms  249.951 ms
+17  fourhundredge-0-0-0-0.4079.core2.clev.net.internet2.edu (163.253.2.16)  248.783 ms  248.701 ms  248.620 ms
+18  fourhundredge-0-0-0-3.4079.core2.ashb.net.internet2.edu (163.253.1.138)  248.532 ms  248.008 ms  336.718 ms
+19  fourhundredge-0-0-0-1.4079.core1.phil.net.internet2.edu (163.253.1.137)  336.570 ms  336.490 ms  336.418 ms
+20  163.253.5.9 (163.253.5.9)  336.165 ms  336.096 ms  336.024 ms
+21  172.96.130.54 (172.96.130.54)  336.039 ms  335.915 ms  291.235 ms
+22  fw-border-87-router.princeton.edu (204.153.48.2)  291.173 ms  291.021 ms  291.026 ms
+23  rtr-core-east-router.princeton.edu (128.112.12.9)  291.325 ms  291.258 ms  291.127 ms
+24  core-ns-router.princeton.edu (128.112.12.226)  249.701 ms  249.618 ms  250.087 ms
+25  www.net.princeton.edu (128.112.128.55)  249.445 ms  249.462 ms  249.412 ms
 ________________________________________________________________________________________
 
 ```
@@ -277,35 +378,37 @@ ________________________________________________________________________________
 ```
 Testing Link #2: 
 
+Testing Link #2 : 213.144.137.198 
+
 
 traceroute to 213.144.137.198 (213.144.137.198), 30 hops max, 60 byte packets
- 1  192.168.0.1 (192.168.0.1)  2.394 ms  2.187 ms  2.080 ms
- 2  gateway.nsw.superloop.au (122.199.32.1)  16.766 ms  16.695 ms  16.630 ms
- 3  202.90.206.100 (202.90.206.100)  16.562 ms  16.499 ms  16.434 ms
- 4  Bundle-Ether31.bdr02-ipt-47bourke-syd.au.superloop.com (103.200.13.67)  170.546 ms  170.481 ms  170.402 ms
- 5  103.200.13.168 (103.200.13.168)  170.312 ms  170.238 ms  170.165 ms
- 6  ae7.er3.lax112.us.zip.zayo.com (64.124.204.201)  166.297 ms  162.300 ms  165.952 ms
- 7  * * *
- 8  * ae3.cs1.dfw2.us.eth.zayo.com (64.125.29.52)  302.892 ms *
- 9  * * *
-10  * * *
-11  * * *
+ 1  * * *
+ 2  irb-52686.kecd1-176q4-cbl-e1.gw.unsw.edu.au (172.17.30.178)  1.805 ms  2.119 ms  3.955 ms
+ 3  ae4-2702.cfw1.gw.unsw.edu.au (172.17.31.52)  2.323 ms  2.297 ms  2.274 ms
+ 4  irb-52710.kecd1-176q4-cbl-e1.gw.unsw.edu.au (172.17.31.114)  3.853 ms  3.830 ms  3.800 ms
+ 5  ae2-1907.kecd2-lg11c1-pbr-c1.gw.unsw.edu.au (172.17.17.45)  3.774 ms ae2-1905.kecd1-1q16c3-pbr-c1.gw.unsw.edu.au (172.17.17.9)  3.751 ms ae2-1907.kecd2-lg11c1-pbr-c1.gw.unsw.edu.au (172.17.17.45)  3.729 ms
+ 6  172.17.17.110 (172.17.17.110)  3.708 ms  3.041 ms 172.17.17.102 (172.17.17.102)  2.700 ms
+ 7  138.44.5.0 (138.44.5.0)  5.547 ms  6.153 ms  6.119 ms
+ 8  et-0-3-0.pe1.bkvl.nsw.aarnet.net.au (113.197.15.147)  3.382 ms  3.705 ms  3.320 ms
+ 9  xe-0-2-5.bdr1.b.sea.aarnet.net.au (202.158.194.121)  142.422 ms  142.398 ms  142.057 ms
+10  xe-4-1-1.mpr1.sea1.us.above.net (64.125.193.129)  142.355 ms  142.334 ms  141.659 ms
+11  ae27.cs1.sea1.us.eth.zayo.com (64.125.29.0)  263.948 ms  263.835 ms  264.203 ms
 12  * * *
-13  ae4.mpr1.lhr15.uk.zip.zayo.com (64.125.28.195)  411.204 ms  411.053 ms  410.948 ms
-14  linx-1.init7.net (195.66.224.175)  409.406 ms  304.998 ms  303.598 ms
-15  r2lon2.core.init7.net (5.180.134.18)  319.055 ms  318.987 ms  306.551 ms
-16  r2fra3.core.init7.net (5.180.135.129)  316.665 ms  306.787 ms  312.380 ms
-17  r1fra3.core.init7.net (77.109.135.33)  305.750 ms  350.166 ms  309.587 ms
-18  r2zrh2.core.init7.net (5.180.135.172)  320.704 ms  318.045 ms  318.820 ms
-19  r2zrh5.core.init7.net (5.180.135.233)  317.848 ms  317.750 ms  317.664 ms
-20  r1glb3.core.init7.net (5.180.135.68)  320.151 ms  319.714 ms  316.152 ms
-21  r1zrh10.core.init7.net (5.180.135.58)  317.145 ms  316.989 ms  315.228 ms
-22  r1win9.core.init7.net (5.180.135.57)  313.904 ms  411.340 ms  411.220 ms
-23  r2win9.core.init7.net (5.180.135.0)  402.618 ms  402.474 ms  402.363 ms
-24  r2win7.core.init7.net (5.180.135.30)  402.224 ms  401.876 ms  400.120 ms
-25  * * *
-26  * * *
-27  * * *
+13  * * *
+14  * * *
+15  ae4.mpr1.lhr15.uk.zip.zayo.com (64.125.28.195)  431.304 ms  431.264 ms  431.224 ms
+16  linx-1.init7.net (195.66.224.175)  431.906 ms  361.540 ms  361.420 ms
+17  r2lon2.core.init7.net (5.180.135.248)  361.373 ms  306.227 ms  306.067 ms
+18  r2fra3.core.init7.net (5.180.135.129)  306.916 ms  306.461 ms  306.282 ms
+19  r1fra3.core.init7.net (80.81.192.67)  306.181 ms  306.089 ms  307.856 ms
+20  r2zrh2.core.init7.net (5.180.135.172)  307.815 ms  306.998 ms  306.965 ms
+21  r2zrh5.core.init7.net (5.180.135.233)  306.940 ms  306.921 ms  306.898 ms
+22  r1glb3.core.init7.net (5.180.135.68)  306.983 ms  306.860 ms  306.787 ms
+23  r1zrh10.core.init7.net (5.180.135.58)  306.719 ms  306.651 ms  306.584 ms
+24  r1win9.core.init7.net (5.180.135.57)  306.513 ms  306.039 ms  305.917 ms
+25  r1win7.core.init7.net (5.180.135.24)  306.261 ms  306.188 ms  306.121 ms
+26  r1win1.core.init7.net (5.180.134.123)  306.051 ms  305.984 ms  307.638 ms
+27  r2win7.core.init7.net (5.180.134.124)  307.510 ms  307.380 ms  307.304 ms
 28  * * *
 29  * * *
 30  * * *
@@ -316,13 +419,13 @@ ________________________________________________________________________________
 
 The paths of the reverse and forward route are different.
 
-Albeit, as seen above the reverse route goes through some similar routers with the forward route as with the case for <Bundle-Ether31.bdr02-ipt-47bourke-syd.au.superloop.com> which implies my Superloop ISP. However, for both routes there are many routers which are different because of the different IP addresses.
+Albeit, as seen above the reverse route goes through some similar routers with the forward route as with the case for <aarnet> which is Australia's national research and education network. However, for both routes there are many routers which are different because of the different IP addresses.
 
 Something to note is the close proximity of the IP addresses for <https://init.7>, which may imply a server hosting many machines to achieve this.
 
 #### 3.3.3)
 
-Standard routers appear if the IP address has not been translated. This is the case with <https://www.net.princeton.edu/traceroute.html> . However, it appears with the  <https://init.7> and my SuperLoop ISP have used a translated IP (NAT Gateway) which may explain why the terminating IP addresses are different.
+Standard routers appear if the IP address has not been translated. This is the case with <https://www.net.princeton.edu/traceroute.html> . However, it appears with the  <https://init.7> and UNSW have used a translated IP (NAT Gateway) which may explain why the terminating IP addresses are different.
 
 ## Exercise 4
 

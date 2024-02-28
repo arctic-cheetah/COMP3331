@@ -50,11 +50,11 @@ def q3b():
 def q3c():
     i = 1
     for link in q3cWebsites:
-        print(f"Testing Link #{i}: \n\n")
+        print(f"Testing Link #{i} : {link} \n\n")
         os.system(f"traceroute -m 30 {link}")
         print("________________________________________________________________________________________")
         print("\n")
         i+=1
 
 # q1()
-q3b()
+q3c()

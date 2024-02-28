@@ -58,11 +58,11 @@ public class PingClient {
 
                     // print as shown: ping to 127.0.0.1, seq = 50215, rtt = 120 ms
                     System.out.println("ping to " + txPacket.getAddress().getHostAddress() + ", seq = "
-                            + message.getSequence() + ", rtt = " + rtt);
+                            + message.getSequence() + ", rtt = " + rtt + " ms");
                 } catch (Exception e) {
                     // System.out.println(e);
                     System.out.println("ping to " + txPacket.getAddress().getHostAddress() + ", seq = "
-                            + message.getSequence() + ", rtt = timeout");
+                            + message.getSequence() + ", timeout");
                     continue;
                 } finally {
                     start += 1;
@@ -83,7 +83,7 @@ public class PingClient {
 
     private static void RTTStats(ArrayList<Long> tripTimeData) {
         Integer tripTimeSum = tripTimeData.stream().map(e -> e.intValue()).reduce(Integer::sum).orElse(-1);
-        Double averageTime = (double) tripTimeSum / tripTimeData.size();
+        int averageTime = (int) tripTimeSum / tripTimeData.size();
         // int tmpMin = tripTimeData.stream().mapToInt(Long::intValue).min().orElse(-1);
 
         Integer minTime = tripTimeData.stream().map(e -> e.intValue()).min(Integer::compare).orElse(0);
