@@ -60,16 +60,14 @@ public class PingClient {
                     System.out.println("ping to " + txPacket.getAddress().getHostAddress() + ", seq = "
                             + message.getSequence() + ", rtt = " + rtt);
                 } catch (Exception e) {
-                    System.out.println("-----------------------------------------------");
-                    System.out.println(e);
-                    System.out.println("Waited for 600ms, too long! packet #" + start + " lost!");
-                    System.out.println("-----------------------------------------------\n");
+                    // System.out.println(e);
+                    System.out.println("ping to " + txPacket.getAddress().getHostAddress() + ", seq = "
+                            + message.getSequence() + ", rtt = timeout");
                     continue;
                 } finally {
                     start += 1;
                 }
             }
-            System.out.println("-----------------------------------------------\n");
         }
         // Calculate Packet RTT min, max, avg
         RTTStats(tripTimeData);

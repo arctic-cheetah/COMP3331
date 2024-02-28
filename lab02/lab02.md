@@ -4,7 +4,7 @@
 
 ### 3.1)
 
-The server returns a 200 status code to the client.
+The server returns a 200 OK status code to the client.
 
 ![img](./lab02-q3-a.png)
 
@@ -22,7 +22,7 @@ The connection between the browser and server is persistent. We can conclude thi
 
 ### 3.4) How many bytes of content are being returned to the browser?
 
-73 bytes of html content is returned:
+73 bytes of html content are returned:
 
 ![img](./lab02-q3-4.png)
 

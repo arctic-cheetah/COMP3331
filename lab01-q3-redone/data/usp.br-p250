@@ -1,0 +1,55 @@
+PING usp.br (200.144.248.41) 222(250) bytes of data.
+230 bytes from webhost.uspdigital.usp.br (200.144.248.41): icmp_seq=1 ttl=230 time=373 ms
+230 bytes from webhost.uspdigital.usp.br (200.144.248.41): icmp_seq=2 ttl=230 time=396 ms
+230 bytes from webhost.uspdigital.usp.br (200.144.248.41): icmp_seq=3 ttl=230 time=420 ms
+230 bytes from webhost.uspdigital.usp.br (200.144.248.41): icmp_seq=4 ttl=230 time=444 ms
+230 bytes from webhost.uspdigital.usp.br (200.144.248.41): icmp_seq=5 ttl=230 time=365 ms
+230 bytes from webhost.uspdigital.usp.br (200.144.248.41): icmp_seq=6 ttl=230 time=388 ms
+230 bytes from webhost.uspdigital.usp.br (200.144.248.41): icmp_seq=7 ttl=230 time=401 ms
+230 bytes from webhost.uspdigital.usp.br (200.144.248.41): icmp_seq=8 ttl=230 time=423 ms
+230 bytes from webhost.uspdigital.usp.br (200.144.248.41): icmp_seq=9 ttl=230 time=548 ms
+230 bytes from webhost.uspdigital.usp.br (200.144.248.41): icmp_seq=10 ttl=230 time=366 ms
+230 bytes from webhost.uspdigital.usp.br (200.144.248.41): icmp_seq=11 ttl=230 time=389 ms
+230 bytes from webhost.uspdigital.usp.br (200.144.248.41): icmp_seq=12 ttl=230 time=411 ms
+230 bytes from webhost.uspdigital.usp.br (200.144.248.41): icmp_seq=13 ttl=230 time=433 ms
+230 bytes from webhost.uspdigital.usp.br (200.144.248.41): icmp_seq=14 ttl=230 time=354 ms
+230 bytes from webhost.uspdigital.usp.br (200.144.248.41): icmp_seq=15 ttl=230 time=377 ms
+230 bytes from webhost.uspdigital.usp.br (200.144.248.41): icmp_seq=16 ttl=230 time=399 ms
+230 bytes from webhost.uspdigital.usp.br (200.144.248.41): icmp_seq=17 ttl=230 time=439 ms
+230 bytes from webhost.uspdigital.usp.br (200.144.248.41): icmp_seq=18 ttl=230 time=344 ms
+230 bytes from webhost.uspdigital.usp.br (200.144.248.41): icmp_seq=19 ttl=230 time=342 ms
+230 bytes from webhost.uspdigital.usp.br (200.144.248.41): icmp_seq=20 ttl=230 time=366 ms
+230 bytes from webhost.uspdigital.usp.br (200.144.248.41): icmp_seq=21 ttl=230 time=411 ms
+230 bytes from webhost.uspdigital.usp.br (200.144.248.41): icmp_seq=22 ttl=230 time=437 ms
+230 bytes from webhost.uspdigital.usp.br (200.144.248.41): icmp_seq=23 ttl=230 time=354 ms
+230 bytes from webhost.uspdigital.usp.br (200.144.248.41): icmp_seq=24 ttl=230 time=377 ms
+230 bytes from webhost.uspdigital.usp.br (200.144.248.41): icmp_seq=25 ttl=230 time=400 ms
+230 bytes from webhost.uspdigital.usp.br (200.144.248.41): icmp_seq=26 ttl=230 time=422 ms
+230 bytes from webhost.uspdigital.usp.br (200.144.248.41): icmp_seq=27 ttl=230 time=447 ms
+230 bytes from webhost.uspdigital.usp.br (200.144.248.41): icmp_seq=28 ttl=230 time=339 ms
+230 bytes from webhost.uspdigital.usp.br (200.144.248.41): icmp_seq=29 ttl=230 time=387 ms
+230 bytes from webhost.uspdigital.usp.br (200.144.248.41): icmp_seq=30 ttl=230 time=409 ms
+230 bytes from webhost.uspdigital.usp.br (200.144.248.41): icmp_seq=31 ttl=230 time=436 ms
+230 bytes from webhost.uspdigital.usp.br (200.144.248.41): icmp_seq=32 ttl=230 time=338 ms
+230 bytes from webhost.uspdigital.usp.br (200.144.248.41): icmp_seq=33 ttl=230 time=374 ms
+230 bytes from webhost.uspdigital.usp.br (200.144.248.41): icmp_seq=34 ttl=230 time=402 ms
+230 bytes from webhost.uspdigital.usp.br (200.144.248.41): icmp_seq=35 ttl=230 time=423 ms
+230 bytes from webhost.uspdigital.usp.br (200.144.248.41): icmp_seq=36 ttl=230 time=339 ms
+230 bytes from webhost.uspdigital.usp.br (200.144.248.41): icmp_seq=37 ttl=230 time=676 ms
+230 bytes from webhost.uspdigital.usp.br (200.144.248.41): icmp_seq=38 ttl=230 time=403 ms
+230 bytes from webhost.uspdigital.usp.br (200.144.248.41): icmp_seq=39 ttl=230 time=429 ms
+230 bytes from webhost.uspdigital.usp.br (200.144.248.41): icmp_seq=40 ttl=230 time=451 ms
+230 bytes from webhost.uspdigital.usp.br (200.144.248.41): icmp_seq=41 ttl=230 time=372 ms
+230 bytes from webhost.uspdigital.usp.br (200.144.248.41): icmp_seq=42 ttl=230 time=393 ms
+230 bytes from webhost.uspdigital.usp.br (200.144.248.41): icmp_seq=43 ttl=230 time=418 ms
+230 bytes from webhost.uspdigital.usp.br (200.144.248.41): icmp_seq=44 ttl=230 time=441 ms
+230 bytes from webhost.uspdigital.usp.br (200.144.248.41): icmp_seq=45 ttl=230 time=362 ms
+230 bytes from webhost.uspdigital.usp.br (200.144.248.41): icmp_seq=46 ttl=230 time=385 ms
+230 bytes from webhost.uspdigital.usp.br (200.144.248.41): icmp_seq=47 ttl=230 time=408 ms
+230 bytes from webhost.uspdigital.usp.br (200.144.248.41): icmp_seq=48 ttl=230 time=428 ms
+230 bytes from webhost.uspdigital.usp.br (200.144.248.41): icmp_seq=49 ttl=230 time=452 ms
+230 bytes from webhost.uspdigital.usp.br (200.144.248.41): icmp_seq=50 ttl=230 time=333 ms
+
+--- usp.br ping statistics ---
+50 packets transmitted, 50 received, 0% packet loss, time 58167ms
+rtt min/avg/max/mdev = 332.872/404.478/675.952/55.400 ms
