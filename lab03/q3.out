@@ -1,0 +1,21 @@
+; <<>> DiG 9.18.24-1-Debian <<>> www.princeton.edu
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 44238
+;; flags: qr rd ra; QUERY: 1, ANSWER: 3, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+; COOKIE: 017ddb898186eea50100000065e40d3efb793d49814e9dc8 (good)
+;; QUESTION SECTION:
+;www.princeton.edu.             IN      A
+
+;; ANSWER SECTION:
+www.princeton.edu.      2501    IN      CNAME   www.princeton.edu.cdn.cloudflare.net.
+www.princeton.edu.cdn.cloudflare.net. 300 IN A  104.18.4.101
+www.princeton.edu.cdn.cloudflare.net. 300 IN A  104.18.5.101
+
+;; Query time: 12 msec
+;; SERVER: 129.94.242.2#53(129.94.242.2) (UDP)
+;; WHEN: Sun Mar 03 16:40:14 AEDT 2024
+;; MSG SIZE  rcvd: 156
