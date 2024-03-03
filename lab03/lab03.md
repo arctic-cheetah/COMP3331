@@ -574,9 +574,8 @@ orchestra.cse.unsw.EDU.AU. 3600 IN SOA maestro.orchestra.cse.unsw.EDU.AU. hostma
 ;; WHEN: Sun Mar 03 21:15:44 AEDT 2024
 ;; MSG SIZE  rcvd: 185
 
-
 ```
 
-### 3.11)Can one physical machine have several names and/or IP addresses associated with it?
+### 3.11) Can one physical machine have several names and/or IP addresses associated with it?
 
 Yes, one machine can have several names and IP addresses. For example, in the above an IP address can map to multiple names. Also, a computer may have multiple network cards and in turn, will have several IP addresses.
