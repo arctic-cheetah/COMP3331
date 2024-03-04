@@ -6,17 +6,16 @@ CHUNK_SIZE = 0xfff
 decoder = "ascii"
 HTTP_OK = "200 OK"
 HTTP_NO_CONTENT = "204 No Content"
+HTTP_NOT_FOUND = "404 Not Found"
 HTTP_RESPONSE_TOP = "HTTP/1.1"
 PNG = "image/png"
 TXT = "text/html"
-debug = ""
-CWD = os.getcwd()
+
 
 def main():
     
-    if (CWD == "/home/k-730/Code/COMP3331"):
-        debug = "lab03/"
-    print(CWD)
+
+    
     
     if (len(sys.argv) < 2):
         print("Required Arguments: [port]")
@@ -39,8 +38,8 @@ def main():
 
 
 
-def HTTP_response(code : str, content: str):
-    return HTTP_RESPONSE_TOP + " " + code + "\n\r" + f"""Content-Type: {content}\n\rKeep-Alive: timeout=2, max=2\r\n\r\n"""
+def HTTP_response(code : str, content: str, length: int):
+    return HTTP_RESPONSE_TOP + " " + code + "\n\r" + f"""Content-Type: {content}\n\rContent-Length: {length}\n\rKeep-Alive: timeout=2, max=2\r\n\r\n"""
 
 def handle_client(sock : socket, addr, serverPort :int):
     #(iii) Parse the request to determine the specific file being requested.
@@ -66,12 +65,17 @@ def handle_client(sock : socket, addr, serverPort :int):
                 #(v) Create an HTTP response message consisting of the requested file preceded by header lines.
                 #(vi) Send the response over the TCP connection to the requesting browser.
             except Exception as err:
-                print(err)
-                res = HTTP_response(HTTP_NO_CONTENT, TXT).encode()
+                res : bytes
+                if (str(err) == "ico"):
+                    res = HTTP_response(HTTP_NO_CONTENT, TXT, 0).encode()
+                    # sock.close()
+                    # connected = False
+                else:
+                    res = HTTP_response(HTTP_NOT_FOUND, TXT, 0).encode()
+                print(res)
                 sock.send(res)
-                sock.close()
-                connected = False
-                return
+
+                
                             
         #(vii) If the requested file is not present on the server, the server should send an HTTP “404 Not Found” message back to the client.
         #(viii) The server should listen in a loop, waiting for the next request from the browser.
@@ -79,18 +83,31 @@ def handle_client(sock : socket, addr, serverPort :int):
     sock.close()
 
 def sendFileData(sock, fileName, extension):
+    debug=""
+    if (os.getcwd() == '/home/k-730/Code/COMP3331'):
+        debug = "lab03/"
+
     if (extension == "html"):
         f = open(debug + fileName, "r")
-        raw_data = HTTP_response(HTTP_OK, TXT) + f.read()
+        res = f.read()
+        http = HTTP_response(HTTP_OK, TXT, f.tell()) + res
         f.close()
-        sock.send(raw_data.encode())
+        sock.send(http.encode())
+        print(http)
     elif (extension == "png"):
         f = open(debug + fileName, "rb")
-        raw_data = HTTP_response(HTTP_OK, PNG) # + f"<img src={hostName}:{serverPort}/{fileName}>"
-        sock.send(raw_data.encode())
-        sock.send(f.read())
+        res = f.read()
+        http = HTTP_response(HTTP_OK, PNG, f.tell()) # + f"<img src={hostName}:{serverPort}/{fileName}>"
+        sock.send(http.encode())
+        sock.send(res)
         f.close()
-    print(raw_data)
+        print(http)
+    elif (extension == "ico"):
+        raise Exception("ico")
+    else:
+        raise Exception("Incompatible file type")
+        
+        
     
 
 if __name__ == "__main__":
