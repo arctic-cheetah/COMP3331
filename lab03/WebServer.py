@@ -1,4 +1,4 @@
-import sys, socket, os, threading
+import sys, socket, threading
 
 # HOST_NAME =
 hostName = "127.0.0.1"
@@ -10,6 +10,7 @@ HTTP_NOT_FOUND = "404 Not Found"
 HTTP_RESPONSE_TOP = "HTTP/1.1"
 PNG = "image/png"
 TXT = "text/html"
+TIMEOUT = 2
 
 
 def main():
@@ -17,6 +18,7 @@ def main():
     if len(sys.argv) < 2:
         print("Required Arguments: [port]")
         return 0
+    print("Server starting!!")
     port = int(sys.argv[1])
     # hostName = socket.gethostbyname(socket.gethostname()) # TEST!
     address = (hostName, port)
@@ -29,8 +31,15 @@ def main():
     while True:
         (sock, addr) = server.accept()
         thread = threading.Thread(target=handle_client, args=(sock, addr, port))
-        thread.start()
-        print(f"[Active Connections] {threading.active_count() - 1}")
+        try:
+            # sock.settimeout(TIMEOUT)
+            thread.start()
+            print(f"[Active Connections] {threading.active_count() - 1}")
+        except Exception as err:
+            sock.shutdown(socket.SHUT_RDWR)
+            sock.close()
+            print(err)
+            continue
 
 
 def HTTP_response(code: str, content: str, length: int):
@@ -39,7 +48,7 @@ def HTTP_response(code: str, content: str, length: int):
         + " "
         + code
         + "\n\r"
-        + f"""Content-Type: {content}\n\rContent-Length: {length}\n\rKeep-Alive: timeout=2, max=2\r\n\r\n"""
+        + f"""Connection: Keep-Alive\n\rContent-Type: {content}\n\rContent-Length: {length}\n\rKeep-Alive: timeout={TIMEOUT}, max=10\r\n\r\n"""
     )
 
 
@@ -56,6 +65,7 @@ def handle_client(sock: socket, addr, serverPort: int):
         print(HTTP_req)
         if len(msg) == 0:
             connected = False
+            sock.shutdown(socket.SHUT_RDWR)
             sock.close()
             return
 
@@ -70,17 +80,16 @@ def handle_client(sock: socket, addr, serverPort: int):
                 res: bytes
                 if str(err) == "ico":
                     res = HTTP_response(HTTP_NO_CONTENT, TXT, 0).encode()
-                    # sock.close()
-                    # connected = False
                 else:
                     res = HTTP_response(HTTP_NOT_FOUND, TXT, 0).encode()
                 print(res)
-                sock.send(res)
-
+                sock.sendall(res)
+            connected = False
         # (vii) If the requested file is not present on the server, the server should send an HTTP “404 Not Found” message back to the client.
         # (viii) The server should listen in a loop, waiting for the next request from the browser.
         # (ix) The server should be able to handle HTTP 1.1 persistent connections. This means It should be able to handle multiple requests from the same connection. This will carry 1 mark if you manage to implement this
-    sock.close()
+        sock.shutdown(socket.SHUT_RDWR)
+        sock.close()
 
 
 def sendFileData(sock, fileName, extension):

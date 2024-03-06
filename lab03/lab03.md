@@ -231,7 +231,7 @@ google.com.             55      IN      MX      10 smtp.google.com.
 
 Choose the name server ns5.dnsmadeeasy.com (208.94.148.13)
 
-Again, there was no authoritative answer
+Again, there was no authoritative answer. The status says it was refused.
 
 ```
 dig @208.94.148.13 google.com MX
@@ -335,7 +335,7 @@ smtp.google.com. 300 IN AAAA 2404:6800:4003:c04::1b
 
 ### 3.10) In this exercise, you simulate the iterative DNS query process to find the IP address of your machine (e.g. lyre00.cse.unsw.edu.au). If you are using VLAB then find the IP address of one of the following: lyre00.cse.unsw.edu.au, lyre01.cse.unsw.edu.au, flute00.cse.unsw.edu.au or flute01.cse.unsw.edu.au. First, find the name server (query type NS) of the "." domain (root domain). Query this nameserver to find the authoritative name server for the "au." domain. Query this second server to find the authoritative nameserver for the "edu.au." domain. Now query this nameserver to find the authoritative nameserver for "unsw.edu.au". Next, query the nameserver of unsw.edu.au to find the authoritative name server of cse.unsw.edu.au. Now, query the nameserver of cse.unsw.edu.au to find your host's IP address. How many DNS servers do you have to query for an authoritative answer?
 
-Using lyre00.cse.unsw.edu.au, I queried:
+Using lyre00.cse.unsw.edu.au via VLAB, I queried:
 
 1) j.root-servers.net
 2) q.au
@@ -554,4 +554,4 @@ orchestra.cse.unsw.EDU.AU. 3600 IN SOA maestro.orchestra.cse.unsw.EDU.AU. hostma
 
 ### 3.11) Can one physical machine have several names and/or IP addresses associated with it?
 
-Yes, one machine can have several names and IP addresses. For example, in the above an IP address can map to multiple names. Also, a computer may have multiple network cards and in turn, will have several IP addresses.
+Yes, one machine can have several names and IP addresses. Also, a computer may have multiple network cards and in turn, will have several IP addresses. For example, in the above an IP address can map to multiple names.
