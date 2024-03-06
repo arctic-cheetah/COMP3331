@@ -45,9 +45,9 @@
             "type": "debugpy",
             "name": "WebServer.py",
             "program": "${file}",
-            "cwd": "${workspaceFolder}",
+            "cwd": "${workspaceFolder}/lab03",
             "request": "launch",
-            "args": "25565"
+            "args": "25566"
         }
     ]
 }
