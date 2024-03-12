@@ -47,7 +47,7 @@
             "program": "${file}",
             "cwd": "${workspaceFolder}/lab03",
             "request": "launch",
-            "args": "25566"
+            "args": "25564"
         }
     ]
 }
