@@ -123,3 +123,63 @@ $$ 232293103 - 232129013 = 164,090 \text{ bytes} $$
 
 Therefore the Throughput is:
 $${164,090 \over 5.42936} = 30,222.715 \text{ bytes / sec} = 30.222 \text{ KB / s}$$
+
+## Exercise 2
+
+### 2.1) What is the sequence number of the TCP SYN segment that is used to initiate the TCP connection between the client computer and server?
+
+The sequence number of the TCP SYN Segment that starts the TCP connection is: **2818463618**
+
+### 2.2) What is the sequence number of the SYNACK segment sent by the server to the client computer in reply to the SYN? What is the value of the Acknowledgement field in the SYNACK segment? How did the server determine that value?
+
+The replied sequence number of the TCP SYNACK segment is: **1247095790**
+
+The value of the Acknowledgement field in the SYNACK Segment is: **2818463619**
+
+The server determined this value by incrementing the client's seequence number by one: 2818463618 + 1 = 2818463619
+
+### 2.3) What is the sequence number of the ACK segment sent by the client computer in response to the SYNACK? What is the value of the Acknowledgment field in this ACK segment? Does this segment contain any data?
+
+Sequence number of the ACK segment sent by the client: 2818463619
+
+Acknowledgment number in the ACK segment is: 1247095791
+
+The segment does not contain any data as the sequence number in packet No. 298 is the same in packet No.297
+
+# TODO CHECK
+
+### 2.4) Who has done the active close? Is it the client or the server? How you have determined this? What type of closure has been performed? 3 Segment (FIN/FINACK/ACK), 4 Segment (FIN/ACK/FIN/ACK) or Simultaneous close?
+
+Both the client and server has initiated the active close by sending the (FIN,ACK) segment. This is becuase both the client and server sent a (FIN,ACK) segment without receiving a (FIN) segment first.
+
+More so the sequence number in Packet No.304 is the same for the ack number in Packet No.305 instead of (seqnum(No304) + 1).
+
+Lastly, the both increment the sequence numbers by 1 and acknowledge the FIN segment to indicate a closed connection.
+
+Therefore a Simultaneous has been performed.
+
+### 2.5)  How many data bytes have been transferred from the client to the server and from the server to the client during the whole duration of the connection? What relationship does this have with the Initial Sequence Number and the final ACK received from the other side?
+
+Client:
+
+$$ (1) \text{Client inital sequence number after setup (Exclude SYN)} = 2818463619$$
+
+$$(2) \text{Client final sequence number after sending data (Exlcude FIN)} = 2818463652$$
+
+$$ \text{Bytes Sent By Client} = (2) - (1) = 2818463652 - 2818463619 = 33 \text{ bytes} $$
+Server:
+
+$$ (1) \text{Server inital sequence number after setup (Exclude SYN)} = 1247095791 $$
+
+$$(2) \text{Server final sequence number after sending data (Exlcude FIN)} = 1247095831$$
+
+$$ \text{Bytes Sent By Server} = (2) - (1) = 1247095831 - 1247095791 = 40 \text{ bytes} $$
+
+The relationship is that each side has it's own sequence number:
+
+At sender:
+$$\text{SeqNum} = \text{ackNumber of received packet}$$
+At receiver:
+$$\text{ackNumber} = \text{SeqNum of received packet} + \text{lengthTCPSegment}$$
+
+And if a SYN or FIN segment is received, then increment the sequence number by 1 and assign it as the acknowledgement number
