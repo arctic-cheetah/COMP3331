@@ -74,7 +74,7 @@ The sequence number containing the HTTP POST command is: **232129013**
 
 Minimum buffer space advertised in the entire trace is: 5840
 
-The receiver buffer space does not bottleneck (throttle) the sender because the max TCP_Segment_Len sent by the sender is 1460 throughout the trace.
+The receiver buffer space does not bottleneck (throttle) the sender because the window size does not decrease. It increases from 5840 and stays at 62780.
 
 ### 1.5) Are there any retransmitted segments in the trace file? To answer this question, what did you check for (in the trace)?
 
@@ -84,7 +84,9 @@ There are no retransmitted segments in the trace file as seen by the tcp.analysi
 
 ### 1.6) How much data does the receiver typically acknowledge in an ACK? Can you identify cases where the receiver is ACKing every other received segment (recall the discussion about delayed acks from the lecture notes or Section 3.5 of the text)?
 
-The receiver typically acknowledges 1460 bytes of data in an ack.
+The receiver typically acknowledges **1460** bytes of data in an ack.
+
+The receiver starts to use delayed cumulative ack and seems to begin from packet No. 61 (**3920** bytes of data) onwards and there are many other cases of the receiver doing this.
 
 Between No. 87-89 we can see the receiver (gaia.cs.umass.edu) using a cumulative ack to acknowledge the 2 packets in between 81-86 because from the calculation below:
 
@@ -94,11 +96,7 @@ The difference between them: $$(232193017 - 232190097) = 2920 = 2*1460$$ bytes o
 
 Which means the receiver is using a cumulative ack to acknowledge packet No. 81 and 82. And the other following packets
 
-This cumulative ack actually seems to begin from packet No. 60 onwards and there are many other cases of the receiver doing this.
-
-# TODO
-
-The receiver is doing this because it waits up to 500ms for the next segment. If it arrives it sends a cumulative ack. Otherwise, it just sends the ack of that newly receive message
+The receiver is doing this because it waits up to 500ms for the next segment. If it arrives it sends a cumulative ack. Otherwise, it just sends the ack of that newly receive message. This is known as a delayed ack
 
 ### 1.7) What is the TCP connection's throughput (bytes transferred per unit of time during the connection)? Explain how you calculated this value
 
@@ -110,10 +108,10 @@ To get the actual time taken to transfer the file, we need to exclude the TCP se
 
 ![img](./lab04-img/e1q7a.png)
 
-We start at packet No. 4. So start time = 0.02647
+We start at packet No. 4.  So start time = 0.02647
 
 ![img](./lab04-img/e1q7b.png)
-We end at packet No.202. So end time = 5.455830
+We end at packet No.202 because we need to ack the last data packet. So the end time = 5.455830
 
 So the total time taken to transfer the file is:
 $$5.455830s - 0.02647s = 5.42936s $$
@@ -136,23 +134,23 @@ The replied sequence number of the TCP SYNACK segment is: **1247095790**
 
 The value of the Acknowledgement field in the SYNACK Segment is: **2818463619**
 
-The server determined this value by incrementing the client's seequence number by one: 2818463618 + 1 = 2818463619
+The server determined this value by incrementing the client's seequence number by one: $2818463618 + 1 = 2818463619$
 
 ### 2.3) What is the sequence number of the ACK segment sent by the client computer in response to the SYNACK? What is the value of the Acknowledgment field in this ACK segment? Does this segment contain any data?
 
-Sequence number of the ACK segment sent by the client: 2818463619
+Sequence number of the ACK segment sent by the client: $2818463619$
 
-Acknowledgment number in the ACK segment is: 1247095791
+Acknowledgment number in the ACK segment is: $1247095791$
 
 The segment does not contain any data as the sequence number in packet No. 298 is the same in packet No.297
 
-# TODO CHECK
-
 ### 2.4) Who has done the active close? Is it the client or the server? How you have determined this? What type of closure has been performed? 3 Segment (FIN/FINACK/ACK), 4 Segment (FIN/ACK/FIN/ACK) or Simultaneous close?
+
+A simultaneous close has been conducted.
 
 Both the client and server has initiated the active close by sending the (FIN,ACK) segment. This is becuase both the client and server sent a (FIN,ACK) segment without receiving a (FIN) segment first.
 
-More so the sequence number in Packet No.304 is the same for the ack number in Packet No.305 instead of (seqnum(No304) + 1).
+More so the sequence number in Packet No.304 is the same for the acknowledgement number in Packet No.305 instead of (seqnum(No304) + 1).
 
 Lastly, the both increment the sequence numbers by 1 and acknowledge the FIN segment to indicate a closed connection.
 
@@ -175,10 +173,14 @@ $$(2) \text{Server final sequence number after sending data (Exlcude FIN)} = 124
 
 $$ \text{Bytes Sent By Server} = (2) - (1) = 1247095831 - 1247095791 = 40 \text{ bytes} $$
 
-The relationship is that each side has it's own sequence number:
+Initially, during the connection setup the relationship is that each side has it's own sequence number and we increment the sequence number by one and assign it to the acknowledgement number in the SynAck.
+
+Then the relationship is that we increment the sequence number with the length of the TCP data sent. This will be put in the acknowledgement number in the response packet and repeats until we reach the connection tear down phase.
+
+During the teardown phase, we also increment the sequence number by one when sending a response to the FIN segment.
 
 At sender:
-$$\text{SeqNum} = \text{ackNumber of received packet}$$
+$$\text{Initial SeqNum} = \text{ackNumber of received packet}$$
 At receiver:
 $$\text{ackNumber} = \text{SeqNum of received packet} + \text{lengthTCPSegment}$$
 
