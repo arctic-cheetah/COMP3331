@@ -48,14 +48,14 @@ The sequence number containing the HTTP POST command is: **232129013**
 
 #### 1.3.c) What is the EstimatedRTT value (see relevant parts of Section 3.5 or lecture slides) after receiving each ACK? Assume that the initial value of EstimatedRTT is equal to the measured RTT ( SampleRTT ) for the first segment and then is computed using the EstimatedRTT equation for all subsequent segments. Set alpha to 0.125
 
-| TCP Packet No (Sender to Client) | Sequence Number | Time Sent (s) | Acked Time (s) | RTT Value(s) | Estimated RTT(s) |
-| -------------------------------- | --------------- | ------------- | -------------- | ------------ | ---------------- |
-| 4                                | 232129013       | 0.026477      | 0.053937       | 0.02746      | 0.02746          |
-| 5                                | 232129578       | 0.041737      | 0.077294       | 0.035557     | 0.0284721        |
-| 7                                | 232131038       | 0.054026      | 0.124085       | 0.070059     | 0.0336705        |
-| 8                                | 232132498       | 0.05469       | 0.169118       | 0.114428     | 0.0437652        |
-| 10                               | 232133958       | 0.077405      | 0.217299       | 0.139894     | 0.0557813        |
-| 11                               | 232135418       | 0.078157      | 0.267802       | 0.189645     | 0.0725142        |
+| Packet | TCP Packet No (Sender to Client) | Sequence Number | Time Sent (s) | Acked Time (s) | RTT Value(s) | Estimated RTT(s) |
+| ------ | -------------------------------- | --------------- | ------------- | -------------- | ------------ | ---------------- |
+| 1      | 4                                | 232129013       | 0.026477      | 0.053937       | 0.02746      | 0.02746          |
+| 2      | 5                                | 232129578       | 0.041737      | 0.077294       | 0.035557     | 0.0284721        |
+| 3      | 7                                | 232131038       | 0.054026      | 0.124085       | 0.070059     | 0.0336705        |
+| 4      | 8                                | 232132498       | 0.05469       | 0.169118       | 0.114428     | 0.0437652        |
+| 5      | 10                               | 232133958       | 0.077405      | 0.217299       | 0.139894     | 0.0557813        |
+| 6      | 11                               | 232135418       | 0.078157      | 0.267802       | 0.189645     | 0.0725142        |
 
 (d) What is the length of each of the first six TCP segments?
 ![img](./lab04-img/e1q3d.png)
@@ -96,7 +96,7 @@ Which means the receiver is using a cumulative ack to acknowledge packet No. 81 
 
 This cumulative ack actually seems to begin from packet No. 60 onwards and there are many other cases of the receiver doing this.
 
-#### TODO
+# TODO
 
 The receiver is doing this because it waits up to 500ms for the next segment. If it arrives it sends a cumulative ack. Otherwise, it just sends the ack of that newly receive message
 
@@ -118,7 +118,7 @@ We end at packet No.202. So end time = 5.455830
 So the total time taken to transfer the file is:
 $$5.455830s - 0.02647s = 5.42936s $$
 
-FileSize can be found by taking the difference between Packet No. 202's acknowledgement number and Packet No 4 's sequence number
+The FileSize can be found by taking the difference between Packet No. 202's acknowledgement number and Packet No 4 's sequence number
 $$ 232293103 - 232129013 = 164,090 \text{ bytes} $$
 
 Therefore the Throughput is:
