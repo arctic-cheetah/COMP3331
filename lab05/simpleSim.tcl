@@ -15,7 +15,7 @@ proc finish {} {
 	$ns flush-trace
 	close $file1
 	close $file2
-	exec 3331 nam out.nam &
+	# exec 3331 nam out.nam &
 	exit 0
 }
 
