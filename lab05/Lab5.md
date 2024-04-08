@@ -62,3 +62,52 @@ Since tcp2 has a lower RTT than tcp1, this means tcp2 will eventually have a gre
 ### 2.2) Why does the throughput for flow tcp1 fluctuate between a time span of 0.5 sec to 2 sec?
 
 The throughput fluctuates because tcp1 is in the slow start stage.
+
+## Exercise 3
+
+### 3.1) Which nodes communicate with which other nodes? Which route do the packets follow? Does it change over time?
+
+node0 sends packets to node5 and node2 sends packets to node5
+
+The packets follow respectively from:
+node0 -> node1 -> node4 -> node5
+node2 -> node3 -> node5
+
+It does not change over time
+
+### 3.2) What happens at time 1.0 and time 1.2? Does the route between the communicating nodes change as a result?
+
+Between time 1.0 to 1.2, the link between node1 to node4 is down. The packet following route node0 to node5 cannot reach node 5 and the packet terminates at node1. The route between node0 to node5 does not change as it is using a static routing protocol.
+
+### 3.3) Did you observe additional traffic compared to Step 3 above? How does the network react to the changes that take place at time 1.0 and time 1.2 now?
+
+Between time 1.0 to 1.2, the link between node1 to node4 is down. But now the communication between node0 to node5 follows the route:
+
+n0 -> n1 -> n2 -> n3 -> n5
+
+Packets now follow the above route.
+
+After 1.2 seconds, communication between node0 to node5 follows the route :
+
+node0 -> node1 -> node4 -> node5
+
+### 3.4) How does this change affect the routing? Explain why
+
+Making the cost of the link higher (3) in the link between node1 -> node4 causes the communication between node0 to node5 to follow the route:
+n0 -> n1 -> n2 -> n3 -> n5
+
+This is because the cost to follow route:
+
+n0 -> n1 -> n2 -> n3 -> n5
+
+Is actually lower than the cost of the route:
+node0 -> node1 -> node4 -> node5
+
+### 3.5) Describe what happens and deduce the effect of the line you just uncommented
+
+THe communication between node2 to node5 can take either routes:
+
+(a) n2 -> n1 -> n4 -> n5
+(b) n2 -> n3 -> n5
+
+This occurs because the cost between the routes a and route b are actually the same. (They both have a total cost of 4). By uncommenting `Node set multiPath_ 1` this actually makes the packet take either route (a) or route(b).
