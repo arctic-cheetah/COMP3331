@@ -1,0 +1,299 @@
+    INFO: 2024-04-03 14:57:24,111:               log.py:   20: Logging to /mnt/c/Users/dudbo/Documents/Code-Projects/COMP3331/lab04/mdpdf.log
+   DEBUG: 2024-04-03 14:57:24,111:               cli.py:  103: Lab04.md
+    INFO: 2024-04-03 14:57:24,116:         converter.py:   14: Lab04.md
+   DEBUG: 2024-04-03 14:57:24,151:      pdf_renderer.py:  470: printSegment: Lab04
+   DEBUG: 2024-04-03 14:57:24,166:      pdf_renderer.py:  470: printSegment: Exercise 1
+   DEBUG: 2024-04-03 14:57:24,248:      pdf_renderer.py:  470: printSegment: 1.1) What is the IP address of gaia.cs.umass.edu? On what port number is it sending
+   DEBUG: 2024-04-03 14:57:24,269:      pdf_renderer.py:  470: printSegment: and receiving TCP segments for this connection? What are the IP address and TCP
+   DEBUG: 2024-04-03 14:57:24,273:      pdf_renderer.py:  470: printSegment: port numbers used by the client computer (source) that is transferring the file to
+   DEBUG: 2024-04-03 14:57:24,276:      pdf_renderer.py:  470: printSegment: gaia.cs.umass.edu?
+   DEBUG: 2024-04-03 14:57:24,293:      pdf_renderer.py:  235: /mnt/c/Users/dudbo/Documents/Code-Projects/COMP3331/lab04/lab04-img/e1q1.png, 3163, 972
+   DEBUG: 2024-04-03 14:57:24,557:      pdf_renderer.py:  470: printSegment: For gaia.cs.umass.edu:
+   DEBUG: 2024-04-03 14:57:24,559:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-04-03 14:57:24,567:      pdf_renderer.py:  470: printSegment: The IP address is: 128.119.245.12
+   DEBUG: 2024-04-03 14:57:24,569:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-04-03 14:57:24,571:      pdf_renderer.py:  470: printSegment: It sends and receives TCP segments on port 80
+   DEBUG: 2024-04-03 14:57:24,574:      pdf_renderer.py:  470: printSegment: For the client it has:
+   DEBUG: 2024-04-03 14:57:24,576:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-04-03 14:57:24,578:      pdf_renderer.py:  470: printSegment: IP Address: 192.168.1.102
+   DEBUG: 2024-04-03 14:57:24,580:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-04-03 14:57:24,583:      pdf_renderer.py:  470: printSegment: port: 1161
+   DEBUG: 2024-04-03 14:57:24,587:      pdf_renderer.py:  470: printSegment: 1.2) What is the sequence number of the TCP segment containing the HTTP POST
+   DEBUG: 2024-04-03 14:57:24,589:      pdf_renderer.py:  470: printSegment: command?
+   DEBUG: 2024-04-03 14:57:24,598:      pdf_renderer.py:  235: /mnt/c/Users/dudbo/Documents/Code-Projects/COMP3331/lab04/lab04-img/e1q2.png, 3173, 945
+   DEBUG: 2024-04-03 14:57:24,836:      pdf_renderer.py:  470: printSegment: The sequence number containing the HTTP POST command is: 
+   DEBUG: 2024-04-03 14:57:24,847:      pdf_renderer.py:  470: printSegment: 232129013
+   DEBUG: 2024-04-03 14:57:24,856:      pdf_renderer.py:  470: printSegment: 1.3) Consider the TCP segment containing the HTTP POST as the first segment in the
+   DEBUG: 2024-04-03 14:57:24,859:      pdf_renderer.py:  470: printSegment: TCP connection
+   DEBUG: 2024-04-03 14:57:24,876:      pdf_renderer.py:  470: printSegment: 1.3.a) What are the sequence numbers of the first six segments in the TCP connection (including the
+   DEBUG: 2024-04-03 14:57:24,879:      pdf_renderer.py:  470: printSegment: segment containing the HTTP POST) 
+   DEBUG: 2024-04-03 14:57:24,882:      pdf_renderer.py:  470: printSegment: <u>
+   DEBUG: 2024-04-03 14:57:24,894:      pdf_renderer.py:  470: printSegment:  sent from the client to the webserver 
+   DEBUG: 2024-04-03 14:57:24,897:      pdf_renderer.py:  470: printSegment: </u>
+   DEBUG: 2024-04-03 14:57:24,913:      pdf_renderer.py:  470: printSegment:  (Do not consider
+   DEBUG: 2024-04-03 14:57:24,916:      pdf_renderer.py:  470: printSegment: the ACKs received from the server as part of these six segments)?
+   DEBUG: 2024-04-03 14:57:24,919:      pdf_renderer.py:  470: printSegment: | Packet | TCP Packet No (Sender to Client) | Sequence Number |
+   DEBUG: 2024-04-03 14:57:24,922:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-04-03 14:57:24,925:      pdf_renderer.py:  470: printSegment: | ------ | -------------------------------- | --------------- |
+   DEBUG: 2024-04-03 14:57:24,928:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-04-03 14:57:24,942:      pdf_renderer.py:  470: printSegment: |
+   DEBUG: 2024-04-03 14:57:24,945:      pdf_renderer.py:  470: printSegment: 1      | 4                                | 232129013       |
+   DEBUG: 2024-04-03 14:57:24,947:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-04-03 14:57:24,950:      pdf_renderer.py:  470: printSegment: | 2      | 5                                | 232129578       |
+   DEBUG: 2024-04-03 14:57:24,952:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-04-03 14:57:24,960:      pdf_renderer.py:  470: printSegment: | 3      | 7                          
+   DEBUG: 2024-04-03 14:57:24,963:      pdf_renderer.py:  470: printSegment:      | 232131038       |
+   DEBUG: 2024-04-03 14:57:24,965:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-04-03 14:57:24,967:      pdf_renderer.py:  470: printSegment: | 4      | 8                                | 232132498       |
+   DEBUG: 2024-04-03 14:57:24,969:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-04-03 14:57:24,971:      pdf_renderer.py:  470: printSegment: | 5      | 10                               | 232133958       |
+   DEBUG: 2024-04-03 14:57:24,973:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-04-03 14:57:24,983:      pdf_renderer.py:  470: printSegment: | 6
+   DEBUG: 2024-04-03 14:57:24,985:      pdf_renderer.py:  470: printSegment:      | 11                               | 232135418       |
+   DEBUG: 2024-04-03 14:57:25,013:      pdf_renderer.py:  470: printSegment: 1.3.b) At what time was each segment sent? When was the ACK for each segment received? Given the
+   DEBUG: 2024-04-03 14:57:25,022:      pdf_renderer.py:  470: printSegment: difference between when each TCP segment was sent and when its acknowledgement was received,
+   DEBUG: 2024-04-03 14:57:25,024:      pdf_renderer.py:  470: printSegment: what is the RTT value for each of the six segments?
+   DEBUG: 2024-04-03 14:57:25,028:      pdf_renderer.py:  470: printSegment: | Packet | TCP Packet No (Sender to Client) | Sequence Number | Time Sent (s) | Acked Time (s) | RTT Value(s) |
+   DEBUG: 2024-04-03 14:57:25,030:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-04-03 14:57:25,035:      pdf_renderer.py:  470: printSegment: |
+   DEBUG: 2024-04-03 14:57:25,037:      pdf_renderer.py:  470: printSegment: ------ | -------------------------------- | --------------- | ------------- | -------------- | --------- |
+   DEBUG: 2024-04-03 14:57:25,039:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-04-03 14:57:25,053:      pdf_renderer.py:  470: printSegment: | 1      | 4                                |
+   DEBUG: 2024-04-03 14:57:25,056:      pdf_renderer.py:  470: printSegment: 232129013       | 0.026477      | 0.053937       | 0.02746   |
+   DEBUG: 2024-04-03 14:57:25,059:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-04-03 14:57:25,069:      pdf_renderer.py:  470: printSegment: | 2      | 5                                | 232129578       | 0.041737     
+   DEBUG: 2024-04-03 14:57:25,071:      pdf_renderer.py:  470: printSegment: | 0.077294       | 0.035557  |
+   DEBUG: 2024-04-03 14:57:25,073:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-04-03 14:57:25,076:      pdf_renderer.py:  470: printSegment: | 3      | 7                                | 232131038       | 0.054026      | 0.124085       | 0.070059  |
+   DEBUG: 2024-04-03 14:57:25,078:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-04-03 14:57:25,096:      pdf_renderer.py:  470: printSegment: |
+   DEBUG: 2024-04-03 14:57:25,099:      pdf_renderer.py:  470: printSegment: 4      | 8                                | 232132498       | 0.05469       | 0.169118       | 0.114428  |
+   DEBUG: 2024-04-03 14:57:25,101:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-04-03 14:57:25,120:      pdf_renderer.py:  470: printSegment: | 5      | 10                               |
+   DEBUG: 2024-04-03 14:57:25,123:      pdf_renderer.py:  470: printSegment: 232133958       | 0.077405      | 0.217299       | 0.139894  |
+   DEBUG: 2024-04-03 14:57:25,125:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-04-03 14:57:25,136:      pdf_renderer.py:  470: printSegment: | 6      | 11                               | 232135418       | 0.078157    
+   DEBUG: 2024-04-03 14:57:25,138:      pdf_renderer.py:  470: printSegment:  | 0.267802       | 0.189645  |
+   DEBUG: 2024-04-03 14:57:25,188:      pdf_renderer.py:  470: printSegment: 1.3.c) What is the EstimatedRTT value (see relevant parts of Section 3.5 or lecture slides) after receiving
+   DEBUG: 2024-04-03 14:57:25,211:      pdf_renderer.py:  470: printSegment: each ACK? Assume that the initial value of EstimatedRTT is equal to the measured RTT ( SampleRTT )
+   DEBUG: 2024-04-03 14:57:25,216:      pdf_renderer.py:  470: printSegment: for the first segment and then is computed using the EstimatedRTT equation for all subsequent
+   DEBUG: 2024-04-03 14:57:25,218:      pdf_renderer.py:  470: printSegment: segments. Set alpha to 0.125
+   DEBUG: 2024-04-03 14:57:25,222:      pdf_renderer.py:  470: printSegment: | Packet | TCP Packet No (Sender to Client) | Sequence Number | Time Sent (s) | Acked Time (s) | RTT Value(s) |
+   DEBUG: 2024-04-03 14:57:25,223:      pdf_renderer.py:  470: printSegment: Estimated RTT(s) |
+   DEBUG: 2024-04-03 14:57:25,225:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-04-03 14:57:25,227:      pdf_renderer.py:  470: printSegment: | ------ | -------------------------------- | --------------- | ------------- | -------------- | ------------ |
+   DEBUG: 2024-04-03 14:57:25,229:      pdf_renderer.py:  470: printSegment: ---------------- |
+   DEBUG: 2024-04-03 14:57:25,230:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-04-03 14:57:25,234:      pdf_renderer.py:  470: printSegment: | 1      | 4                                | 232129013       | 0.026477      | 0.053937       | 0.02746      | 0.02746        
+   DEBUG: 2024-04-03 14:57:25,235:      pdf_renderer.py:  470: printSegment:  |
+   DEBUG: 2024-04-03 14:57:25,237:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-04-03 14:57:25,239:      pdf_renderer.py:  470: printSegment: | 2      | 5                                | 232129578       | 0.041737      | 0.077294       | 0.035557     | 0.0284721        |
+   DEBUG: 2024-04-03 14:57:25,240:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-04-03 14:57:25,268:      pdf_renderer.py:  470: printSegment: | 3      | 7 
+   DEBUG: 2024-04-03 14:57:25,272:      pdf_renderer.py:  470: printSegment:                               | 232131038       | 0.054026      | 0.124085       | 0.070059     | 0.0336705        |
+   DEBUG: 2024-04-03 14:57:25,274:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-04-03 14:57:25,306:      pdf_renderer.py:  470: printSegment: | 4      | 8                   
+   DEBUG: 2024-04-03 14:57:25,308:      pdf_renderer.py:  470: printSegment:             | 232132498       | 0.05469       | 0.169118       | 0.114428     | 0.0437652        |
+   DEBUG: 2024-04-03 14:57:25,310:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-04-03 14:57:25,327:      pdf_renderer.py:  470: printSegment: | 5      | 10                               |
+   DEBUG: 2024-04-03 14:57:25,330:      pdf_renderer.py:  470: printSegment: 232133958       | 0.077405      | 0.217299       | 0.139894     | 0.0557813        |
+   DEBUG: 2024-04-03 14:57:25,332:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-04-03 14:57:25,352:      pdf_renderer.py:  470: printSegment: | 6      | 11                               |
+   DEBUG: 2024-04-03 14:57:25,355:      pdf_renderer.py:  470: printSegment: 232135418       | 0.078157      | 0.267802       | 0.189645     | 0.0725142        |
+   DEBUG: 2024-04-03 14:57:25,358:      pdf_renderer.py:  470: printSegment: (d) What is the length of each of the first six TCP segments?
+   DEBUG: 2024-04-03 14:57:25,360:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-04-03 14:57:25,372:      pdf_renderer.py:  235: /mnt/c/Users/dudbo/Documents/Code-Projects/COMP3331/lab04/lab04-img/e1q3d.png, 3397, 442
+   DEBUG: 2024-04-03 14:57:25,489:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-04-03 14:57:25,492:      pdf_renderer.py:  470: printSegment: | Packet | TCP Packet No (Sender to Client) | Packet Length |
+   DEBUG: 2024-04-03 14:57:25,494:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-04-03 14:57:25,497:      pdf_renderer.py:  470: printSegment: | ------ | -------------------------------- | ------------- |
+   DEBUG: 2024-04-03 14:57:25,499:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-04-03 14:57:25,510:      pdf_renderer.py:  470: printSegment: | 1     
+   DEBUG: 2024-04-03 14:57:25,513:      pdf_renderer.py:  470: printSegment: | 4                                | 565           |
+   DEBUG: 2024-04-03 14:57:25,515:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-04-03 14:57:25,517:      pdf_renderer.py:  470: printSegment: | 2      | 5                                | 1460          |
+   DEBUG: 2024-04-03 14:57:25,519:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-04-03 14:57:25,522:      pdf_renderer.py:  470: printSegment: | 3      | 7                                | 1460        
+   DEBUG: 2024-04-03 14:57:25,524:      pdf_renderer.py:  470: printSegment:  |
+   DEBUG: 2024-04-03 14:57:25,526:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-04-03 14:57:25,528:      pdf_renderer.py:  470: printSegment: | 4      | 8                                | 1460          |
+   DEBUG: 2024-04-03 14:57:25,530:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-04-03 14:57:25,533:      pdf_renderer.py:  470: printSegment: | 5      | 10                               | 1460          |
+   DEBUG: 2024-04-03 14:57:25,535:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-04-03 14:57:25,541:      pdf_renderer.py:  470: printSegment: | 6      | 11                               |
+   DEBUG: 2024-04-03 14:57:25,543:      pdf_renderer.py:  470: printSegment: 1460          |
+   DEBUG: 2024-04-03 14:57:25,560:      pdf_renderer.py:  470: printSegment: 1.4) What is the minimum amount of available buffer space advertised at the receiver
+   DEBUG: 2024-04-03 14:57:25,564:      pdf_renderer.py:  470: printSegment: for the entire trace? Does the lack of receiver buffer space ever throttle the sender?
+   DEBUG: 2024-04-03 14:57:25,579:      pdf_renderer.py:  235: /mnt/c/Users/dudbo/Documents/Code-Projects/COMP3331/lab04/lab04-img/e1q4.png, 1752, 60
+   DEBUG: 2024-04-03 14:57:25,608:      pdf_renderer.py:  470: printSegment: Minimum buffer space advertised in the entire trace is: 5840
+   DEBUG: 2024-04-03 14:57:25,618:      pdf_renderer.py:  470: printSegment: The receiver buffer space does not bottleneck (throttle) the sender because the window size does not decrease. It
+   DEBUG: 2024-04-03 14:57:25,621:      pdf_renderer.py:  470: printSegment: increases from 5840 and stays at 62780.
+   DEBUG: 2024-04-03 14:57:25,629:      pdf_renderer.py:  470: printSegment: 1.5) Are there any retransmitted segments in the trace file? To answer this question,
+   DEBUG: 2024-04-03 14:57:25,632:      pdf_renderer.py:  470: printSegment: what did you check for (in the trace)?
+   DEBUG: 2024-04-03 14:57:25,647:      pdf_renderer.py:  235: /mnt/c/Users/dudbo/Documents/Code-Projects/COMP3331/lab04/lab04-img/e1q5.png, 1640, 415
+   DEBUG: 2024-04-03 14:57:25,707:      pdf_renderer.py:  470: printSegment: There are no retransmitted segments in the trace file as seen by the tcp.analysis.retransmission filter.
+   DEBUG: 2024-04-03 14:57:25,737:      pdf_renderer.py:  470: printSegment: 1.6) How much data does the receiver typically acknowledge in an ACK? Can you
+   DEBUG: 2024-04-03 14:57:25,752:      pdf_renderer.py:  470: printSegment: identify cases where the receiver is ACKing every other received segment (recall the
+   DEBUG: 2024-04-03 14:57:25,755:      pdf_renderer.py:  470: printSegment: discussion about delayed acks from the lecture notes or Section 3.5 of the text)?
+   DEBUG: 2024-04-03 14:57:25,758:      pdf_renderer.py:  470: printSegment: The receiver typically acknowledges 
+   DEBUG: 2024-04-03 14:57:25,761:      pdf_renderer.py:  470: printSegment: 1460
+   DEBUG: 2024-04-03 14:57:25,765:      pdf_renderer.py:  470: printSegment:  bytes of data in an ack.
+   DEBUG: 2024-04-03 14:57:25,768:      pdf_renderer.py:  470: printSegment: The receiver starts to use delayed cumulative ack and seems to begin from packet No. 61 (
+   DEBUG: 2024-04-03 14:57:25,771:      pdf_renderer.py:  470: printSegment: 3920
+   DEBUG: 2024-04-03 14:57:25,777:      pdf_renderer.py:  470: printSegment:  bytes of data)
+   DEBUG: 2024-04-03 14:57:25,781:      pdf_renderer.py:  470: printSegment: onwards and there are many other cases of the receiver doing this.
+   DEBUG: 2024-04-03 14:57:25,792:      pdf_renderer.py:  470: printSegment: Between No. 87-89 we can see the receiver (gaia.cs.umass.edu) using a cumulative ack to acknowledge the 2
+   DEBUG: 2024-04-03 14:57:25,797:      pdf_renderer.py:  470: printSegment: packets in between 81-86 because from the calculation below:
+   DEBUG: 2024-04-03 14:57:25,802:      pdf_renderer.py:  470: printSegment: Packet No. 87 has seqnum $$232190097$$ and Packet No. 88 has seqno: $$232193017$$
+   DEBUG: 2024-04-03 14:57:25,805:      pdf_renderer.py:  470: printSegment: The difference between them: $$(232193017 - 232190097) = 2920 = 2
+   DEBUG: 2024-04-03 14:57:25,807:      pdf_renderer.py:  470: printSegment: *
+   DEBUG: 2024-04-03 14:57:25,809:      pdf_renderer.py:  470: printSegment: 1460$$ bytes of data acked
+   DEBUG: 2024-04-03 14:57:25,814:      pdf_renderer.py:  470: printSegment: Which means the receiver is using a cumulative ack to acknowledge packet No. 81 and 82. And the other following
+   DEBUG: 2024-04-03 14:57:25,816:      pdf_renderer.py:  470: printSegment: packets
+   DEBUG: 2024-04-03 14:57:25,842:      pdf_renderer.py:  470: printSegment: The receiver is doing this because it waits up to 500ms for the next segment. If it arrives it sends a cumulative ack.
+   DEBUG: 2024-04-03 14:57:25,846:      pdf_renderer.py:  470: printSegment: Otherwise, it just sends the ack of that newly receive message. This is known as a delayed ack
+   DEBUG: 2024-04-03 14:57:25,849:      pdf_renderer.py:  470: printSegment: 1.7) What is the TCP connection
+   DEBUG: 2024-04-03 14:57:25,851:      pdf_renderer.py:  470: printSegment: '
+   DEBUG: 2024-04-03 14:57:25,858:      pdf_renderer.py:  470: printSegment: s throughput (bytes transferred per unit of time during
+   DEBUG: 2024-04-03 14:57:25,861:      pdf_renderer.py:  470: printSegment: the connection)? Explain how you calculated this value
+   DEBUG: 2024-04-03 14:57:25,864:      pdf_renderer.py:  470: printSegment: Network Throughput is defined as:
+   DEBUG: 2024-04-03 14:57:25,866:      pdf_renderer.py:  470: printSegment: $$ Throughput = { FileSize 
+   DEBUG: 2024-04-03 14:57:25,868:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-04-03 14:57:25,870:      pdf_renderer.py:  470: printSegment: over TimeTakenFileTransfer} $$
+   DEBUG: 2024-04-03 14:57:25,875:      pdf_renderer.py:  470: printSegment: To get the actual time taken to transfer the file, we need to exclude the TCP setup and teardown phase times(syn and
+   DEBUG: 2024-04-03 14:57:25,877:      pdf_renderer.py:  470: printSegment: fin).
+   DEBUG: 2024-04-03 14:57:25,891:      pdf_renderer.py:  235: /mnt/c/Users/dudbo/Documents/Code-Projects/COMP3331/lab04/lab04-img/e1q7a.png, 1735, 110
+   DEBUG: 2024-04-03 14:57:25,926:      pdf_renderer.py:  470: printSegment: We start at packet No. 4.  So start time = 0.02647
+   DEBUG: 2024-04-03 14:57:25,941:      pdf_renderer.py:  235: /mnt/c/Users/dudbo/Documents/Code-Projects/COMP3331/lab04/lab04-img/e1q7b.png, 1857, 98
+   DEBUG: 2024-04-03 14:57:25,977:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-04-03 14:57:25,982:      pdf_renderer.py:  470: printSegment: We end at packet No.202 because we need to ack the last data packet. So the end time = 5.455830
+   DEBUG: 2024-04-03 14:57:25,985:      pdf_renderer.py:  470: printSegment: So the total time taken to transfer the file is:
+   DEBUG: 2024-04-03 14:57:25,989:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-04-03 14:57:25,992:      pdf_renderer.py:  470: printSegment: $$5.455830s - 0.02647s = 5.42936s $$
+   DEBUG: 2024-04-03 14:57:25,996:      pdf_renderer.py:  470: printSegment: The FileSize can be found by taking the difference between Packet No. 202
+   DEBUG: 2024-04-03 14:57:25,999:      pdf_renderer.py:  470: printSegment: '
+   DEBUG: 2024-04-03 14:57:26,004:      pdf_renderer.py:  470: printSegment: s acknowledgement number and Packet
+   DEBUG: 2024-04-03 14:57:26,006:      pdf_renderer.py:  470: printSegment: No 4 
+   DEBUG: 2024-04-03 14:57:26,008:      pdf_renderer.py:  470: printSegment: '
+   DEBUG: 2024-04-03 14:57:26,011:      pdf_renderer.py:  470: printSegment: s sequence number
+   DEBUG: 2024-04-03 14:57:26,013:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-04-03 14:57:26,017:      pdf_renderer.py:  470: printSegment: $$ 232293103 - 232129013 = 164,090 
+   DEBUG: 2024-04-03 14:57:26,019:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-04-03 14:57:26,022:      pdf_renderer.py:  470: printSegment: text{ bytes} $$
+   DEBUG: 2024-04-03 14:57:26,025:      pdf_renderer.py:  470: printSegment: Therefore the Throughput is:
+   DEBUG: 2024-04-03 14:57:26,028:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-04-03 14:57:26,031:      pdf_renderer.py:  470: printSegment: $${164,090 
+   DEBUG: 2024-04-03 14:57:26,034:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-04-03 14:57:26,037:      pdf_renderer.py:  470: printSegment: over 5.42936} = 30,222.715 
+   DEBUG: 2024-04-03 14:57:26,039:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-04-03 14:57:26,042:      pdf_renderer.py:  470: printSegment: text{ bytes / sec} = 30.222 
+   DEBUG: 2024-04-03 14:57:26,045:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-04-03 14:57:26,048:      pdf_renderer.py:  470: printSegment: text{ KB / s}$$
+   DEBUG: 2024-04-03 14:57:26,050:      pdf_renderer.py:  470: printSegment: Exercise 2
+   DEBUG: 2024-04-03 14:57:26,062:      pdf_renderer.py:  470: printSegment: 2.1) What is the sequence number of the TCP SYN segment that is used to initiate the
+   DEBUG: 2024-04-03 14:57:26,066:      pdf_renderer.py:  470: printSegment: TCP connection between the client computer and server?
+   DEBUG: 2024-04-03 14:57:26,071:      pdf_renderer.py:  470: printSegment: The sequence number of the TCP SYN Segment that starts the TCP connection is: 
+   DEBUG: 2024-04-03 14:57:26,075:      pdf_renderer.py:  470: printSegment: 2818463618
+   DEBUG: 2024-04-03 14:57:26,109:      pdf_renderer.py:  470: printSegment: 2.2) What is the sequence number of the SYNACK segment sent by the server to the
+   DEBUG: 2024-04-03 14:57:26,123:      pdf_renderer.py:  470: printSegment: client computer in reply to the SYN? What is the value of the Acknowledgement field in
+   DEBUG: 2024-04-03 14:57:26,128:      pdf_renderer.py:  470: printSegment: the SYNACK segment? How did the server determine that value?
+   DEBUG: 2024-04-03 14:57:26,132:      pdf_renderer.py:  470: printSegment: The replied sequence number of the TCP SYNACK segment is: 
+   DEBUG: 2024-04-03 14:57:26,135:      pdf_renderer.py:  470: printSegment: 1247095790
+   DEBUG: 2024-04-03 14:57:26,137:      pdf_renderer.py:  470: printSegment: The value of the Acknowledgement field in the SYNACK Segment is: 
+   DEBUG: 2024-04-03 14:57:26,140:      pdf_renderer.py:  470: printSegment: 2818463619
+   DEBUG: 2024-04-03 14:57:26,142:      pdf_renderer.py:  470: printSegment: The server determined this value by incrementing the client
+   DEBUG: 2024-04-03 14:57:26,144:      pdf_renderer.py:  470: printSegment: '
+   DEBUG: 2024-04-03 14:57:26,149:      pdf_renderer.py:  470: printSegment: s seequence number by one: $2818463618 + 1 =
+   DEBUG: 2024-04-03 14:57:26,152:      pdf_renderer.py:  470: printSegment: 2818463619$
+   DEBUG: 2024-04-03 14:57:26,176:      pdf_renderer.py:  470: printSegment: 2.3) What is the sequence number of the ACK segment sent by the client computer in
+   DEBUG: 2024-04-03 14:57:26,184:      pdf_renderer.py:  470: printSegment: response to the SYNACK? What is the value of the Acknowledgment field in this ACK
+   DEBUG: 2024-04-03 14:57:26,187:      pdf_renderer.py:  470: printSegment: segment? Does this segment contain any data?
+   DEBUG: 2024-04-03 14:57:26,189:      pdf_renderer.py:  470: printSegment: Sequence number of the ACK segment sent by the client: $2818463619$
+   DEBUG: 2024-04-03 14:57:26,192:      pdf_renderer.py:  470: printSegment: Acknowledgment number in the ACK segment is: $1247095791$
+   DEBUG: 2024-04-03 14:57:26,195:      pdf_renderer.py:  470: printSegment: The segment does not contain any data as the sequence number in packet No. 298 is the same in packet No.297
+   DEBUG: 2024-04-03 14:57:26,213:      pdf_renderer.py:  470: printSegment: 2.4) Who has done the active close? Is it the client or the server? How you have
+   DEBUG: 2024-04-03 14:57:26,221:      pdf_renderer.py:  470: printSegment: determined this? What type of closure has been performed? 3 Segment
+   DEBUG: 2024-04-03 14:57:26,223:      pdf_renderer.py:  470: printSegment: (FIN/FINACK/ACK), 4 Segment (FIN/ACK/FIN/ACK) or Simultaneous close?
+   DEBUG: 2024-04-03 14:57:26,226:      pdf_renderer.py:  470: printSegment: A simultaneous close has been conducted.
+   DEBUG: 2024-04-03 14:57:26,243:      pdf_renderer.py:  470: printSegment: Both the client and server has initiated the active close by sending the (FIN,ACK) segment. This is becuase both the
+   DEBUG: 2024-04-03 14:57:26,247:      pdf_renderer.py:  470: printSegment: client and server sent a (FIN,ACK) segment without receiving a (FIN) segment first.
+   DEBUG: 2024-04-03 14:57:26,255:      pdf_renderer.py:  470: printSegment: More so the sequence number in Packet No.304 is the same for the acknowledgement number in Packet No.305
+   DEBUG: 2024-04-03 14:57:26,258:      pdf_renderer.py:  470: printSegment: instead of (seqnum(No304) + 1).
+   DEBUG: 2024-04-03 14:57:26,262:      pdf_renderer.py:  470: printSegment: Lastly, the both increment the sequence numbers by 1 and acknowledge the FIN segment to indicate a closed
+   DEBUG: 2024-04-03 14:57:26,265:      pdf_renderer.py:  470: printSegment: connection.
+   DEBUG: 2024-04-03 14:57:26,267:      pdf_renderer.py:  470: printSegment: Therefore a Simultaneous has been performed.
+   DEBUG: 2024-04-03 14:57:26,303:      pdf_renderer.py:  470: printSegment: 2.5)  How many data bytes have been transferred from the client to the server and from
+   DEBUG: 2024-04-03 14:57:26,326:      pdf_renderer.py:  470: printSegment: the server to the client during the whole duration of the connection? What relationship
+   DEBUG: 2024-04-03 14:57:26,330:      pdf_renderer.py:  470: printSegment: does this have with the Initial Sequence Number and the final ACK received from the
+   DEBUG: 2024-04-03 14:57:26,333:      pdf_renderer.py:  470: printSegment: other side?
+   DEBUG: 2024-04-03 14:57:26,335:      pdf_renderer.py:  470: printSegment: Client:
+   DEBUG: 2024-04-03 14:57:26,338:      pdf_renderer.py:  470: printSegment: $$ (1) 
+   DEBUG: 2024-04-03 14:57:26,340:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-04-03 14:57:26,342:      pdf_renderer.py:  470: printSegment: text{Client inital sequence number after setup (Exclude SYN)} = 2818463619$$
+   DEBUG: 2024-04-03 14:57:26,344:      pdf_renderer.py:  470: printSegment: $$(2) 
+   DEBUG: 2024-04-03 14:57:26,346:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-04-03 14:57:26,349:      pdf_renderer.py:  470: printSegment: text{Client final sequence number after sending data (Exlcude FIN)} = 2818463652$$
+   DEBUG: 2024-04-03 14:57:26,351:      pdf_renderer.py:  470: printSegment: $$ 
+   DEBUG: 2024-04-03 14:57:26,353:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-04-03 14:57:26,356:      pdf_renderer.py:  470: printSegment: text{Bytes Sent By Client} = (2) - (1) = 2818463652 - 2818463619 = 33 
+   DEBUG: 2024-04-03 14:57:26,358:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-04-03 14:57:26,359:      pdf_renderer.py:  470: printSegment: text{ bytes} $$
+   DEBUG: 2024-04-03 14:57:26,361:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-04-03 14:57:26,363:      pdf_renderer.py:  470: printSegment: Server:
+   DEBUG: 2024-04-03 14:57:26,366:      pdf_renderer.py:  470: printSegment: $$ (1) 
+   DEBUG: 2024-04-03 14:57:26,368:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-04-03 14:57:26,371:      pdf_renderer.py:  470: printSegment: text{Server inital sequence number after setup (Exclude SYN)} = 1247095791 $$
+   DEBUG: 2024-04-03 14:57:26,373:      pdf_renderer.py:  470: printSegment: $$(2) 
+   DEBUG: 2024-04-03 14:57:26,375:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-04-03 14:57:26,378:      pdf_renderer.py:  470: printSegment: text{Server final sequence number after sending data (Exlcude FIN)} = 1247095831$$
+   DEBUG: 2024-04-03 14:57:26,380:      pdf_renderer.py:  470: printSegment: $$ 
+   DEBUG: 2024-04-03 14:57:26,382:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-04-03 14:57:26,385:      pdf_renderer.py:  470: printSegment: text{Bytes Sent By Server} = (2) - (1) = 1247095831 - 1247095791 = 40 
+   DEBUG: 2024-04-03 14:57:26,387:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-04-03 14:57:26,389:      pdf_renderer.py:  470: printSegment: text{ bytes} $$
+   DEBUG: 2024-04-03 14:57:26,391:      pdf_renderer.py:  470: printSegment: Initially, during the connection setup the relationship is that each side has it
+   DEBUG: 2024-04-03 14:57:26,393:      pdf_renderer.py:  470: printSegment: '
+   DEBUG: 2024-04-03 14:57:26,403:      pdf_renderer.py:  470: printSegment: s own sequence number and we
+   DEBUG: 2024-04-03 14:57:26,406:      pdf_renderer.py:  470: printSegment: increment the sequence number by one and assign it to the acknowledgement number in the SynAck.
+   DEBUG: 2024-04-03 14:57:26,429:      pdf_renderer.py:  470: printSegment: Then the relationship is that we increment the sequence number with the length of the TCP data sent. This will be
+   DEBUG: 2024-04-03 14:57:26,436:      pdf_renderer.py:  470: printSegment: put in the acknowledgement number in the response packet and repeats until we reach the connection tear down
+   DEBUG: 2024-04-03 14:57:26,439:      pdf_renderer.py:  470: printSegment: phase.
+   DEBUG: 2024-04-03 14:57:26,444:      pdf_renderer.py:  470: printSegment: During the teardown phase, we also increment the sequence number by one when sending a response to the FIN
+   DEBUG: 2024-04-03 14:57:26,447:      pdf_renderer.py:  470: printSegment: segment.
+   DEBUG: 2024-04-03 14:57:26,450:      pdf_renderer.py:  470: printSegment: At sender:
+   DEBUG: 2024-04-03 14:57:26,453:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-04-03 14:57:26,455:      pdf_renderer.py:  470: printSegment: $$
+   DEBUG: 2024-04-03 14:57:26,457:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-04-03 14:57:26,459:      pdf_renderer.py:  470: printSegment: text{Initial SeqNum} = 
+   DEBUG: 2024-04-03 14:57:26,461:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-04-03 14:57:26,464:      pdf_renderer.py:  470: printSegment: text{ackNumber of received packet}$$
+   DEBUG: 2024-04-03 14:57:26,466:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-04-03 14:57:26,468:      pdf_renderer.py:  470: printSegment: At receiver:
+   DEBUG: 2024-04-03 14:57:26,470:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-04-03 14:57:26,472:      pdf_renderer.py:  470: printSegment: $$
+   DEBUG: 2024-04-03 14:57:26,475:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-04-03 14:57:26,478:      pdf_renderer.py:  470: printSegment: text{ackNumber} = 
+   DEBUG: 2024-04-03 14:57:26,480:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-04-03 14:57:26,485:      pdf_renderer.py:  470: printSegment: text{SeqNum of received packet} + 
+   DEBUG: 2024-04-03 14:57:26,487:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-04-03 14:57:26,489:      pdf_renderer.py:  470: printSegment: text{lengthTCPSegment}$$
+   DEBUG: 2024-04-03 14:57:26,494:      pdf_renderer.py:  470: printSegment: And if a SYN or FIN segment is received, then increment the sequence number by 1 and assign it as the
+   DEBUG: 2024-04-03 14:57:26,497:      pdf_renderer.py:  470: printSegment: acknowledgement number
+   DEBUG: 2024-04-03 14:57:26,502:      pdf_renderer.py:   53: 0, [1, 'Lab04', 1, 68.0]
+   DEBUG: 2024-04-03 14:57:26,503:      pdf_renderer.py:   53: 1, [2, 'Exercise 1', 1, 106.0]
+   DEBUG: 2024-04-03 14:57:26,504:      pdf_renderer.py:   53: 2, [3, '1.1) What is the IP address of gaia.cs.umass.edu? On what port number is it sending and receiving TCP segments for this connection? What are the IP address and TCP port numbers used by the client computer (source) that is transferring the file to gaia.cs.umass.edu?', 1, 182.40000000000003]
+   DEBUG: 2024-04-03 14:57:26,505:      pdf_renderer.py:   53: 3, [3, '1.2) What is the sequence number of the TCP segment containing the HTTP POST command?', 1, 519.4178944040468]
+   DEBUG: 2024-04-03 14:57:26,506:      pdf_renderer.py:   53: 4, [3, '1.3) Consider the TCP segment containing the HTTP POST as the first segment in the TCP connection', 2, 118.80000000000001]
+   DEBUG: 2024-04-03 14:57:26,507:      pdf_renderer.py:   53: 5, [4, '1.3.a) What are the sequence numbers of the first six segments in the TCP connection (including the segment containing the HTTP POST) ', 2, 171.20000000000002]
+   DEBUG: 2024-04-03 14:57:26,507:      pdf_renderer.py:   53: 6, [4, '1.3.b) At what time was each segment sent? When was the ACK for each segment received? Given the difference between when each TCP segment was sent and when its acknowledgement was received, what is the RTT value for each of the six segments?', 2, 273.20000000000005]
+   DEBUG: 2024-04-03 14:57:26,508:      pdf_renderer.py:   53: 7, [4, '1.3.c) What is the EstimatedRTT value (see relevant parts of Section 3.5 or lecture slides) after receiving each ACK? Assume that the initial value of EstimatedRTT is equal to the measured RTT ( SampleRTT ) for the first segment and then is computed using the EstimatedRTT equation for all subsequent segments. Set alpha to 0.125', 2, 423.20000000000005]
+   DEBUG: 2024-04-03 14:57:26,509:      pdf_renderer.py:   53: 8, [3, '1.4) What is the minimum amount of available buffer space advertised at the receiver for the entire trace? Does the lack of receiver buffer space ever throttle the sender?', 2, 702.8937297615544]
+   DEBUG: 2024-04-03 14:57:26,510:      pdf_renderer.py:   53: 9, [3, '1.5) Are there any retransmitted segments in the trace file? To answer this question, what did you check for (in the trace)?', 3, 206.82739726027398]
+   DEBUG: 2024-04-03 14:57:26,510:      pdf_renderer.py:   53: 10, [3, '1.6) How much data does the receiver typically acknowledge in an ACK? Can you identify cases where the receiver is ACKing every other received segment (recall the discussion about delayed acks from the lecture notes or Section 3.5 of the text)?', 3, 442.85422652856664]
+   DEBUG: 2024-04-03 14:57:26,511:      pdf_renderer.py:   53: 11, [3, '1.7) What is the TCP connection', 3, 660.0542265285666]
+   DEBUG: 2024-04-03 14:57:26,512:      pdf_renderer.py:   53: 12, [2, 'Exercise 2', 4, 339.16936957908314]
+   DEBUG: 2024-04-03 14:57:26,513:      pdf_renderer.py:   53: 13, [3, '2.1) What is the sequence number of the TCP SYN segment that is used to initiate the TCP connection between the client computer and server?', 4, 386.7693695790831]
+   DEBUG: 2024-04-03 14:57:26,514:      pdf_renderer.py:   53: 14, [3, '2.2) What is the sequence number of the SYNACK segment sent by the server to the client computer in reply to the SYN? What is the value of the Acknowledgement field in the SYNACK segment? How did the server determine that value?', 4, 462.369369579083]
+   DEBUG: 2024-04-03 14:57:26,514:      pdf_renderer.py:   53: 15, [3, '2.3) What is the sequence number of the ACK segment sent by the client computer in response to the SYNACK? What is the value of the Acknowledgment field in this ACK segment? Does this segment contain any data?', 4, 585.9693695790829]
+   DEBUG: 2024-04-03 14:57:26,515:      pdf_renderer.py:   53: 16, [3, '2.4) Who has done the active close? Is it the client or the server? How you have determined this? What type of closure has been performed? 3 Segment (FIN/FINACK/ACK), 4 Segment (FIN/ACK/FIN/ACK) or Simultaneous close?', 4, 697.5693695790828]
+   DEBUG: 2024-04-03 14:57:26,516:      pdf_renderer.py:   53: 17, [3, '2.5)  How many data bytes have been transferred from the client to the server and from the server to the client during the whole duration of the connection? What relationship does this have with the Initial Sequence Number and the final ACK received from the other side?', 5, 255.60000000000002]
