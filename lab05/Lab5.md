@@ -10,8 +10,6 @@ The maximum congestion window size that is reached is 100 at 2.08secs.
 
 ### 1.1b) What does the TCP flow do when the congestion window reaches this value? Why?
 
-~~The TCP flow will continue to use _slow-start_ as it has not reached the slow start threshold (ssthresh)~~
-
 The congestion window (cwind) will fall to 1, and the slow start threshold (ssthresh) will be half of 100 (This is from the congestion window and so ssthresh is 50) according to TCP tahoe.
 
 This will occur because the sender has encountered a timeout or a triple ACK, which indicates that the receiver has a full queue because of the sender's increased window size
@@ -30,6 +28,24 @@ The total packet size is (500 + 20 + 20)
 and so the bytes / second is: 540 *193 = 104,220 bytes / second
 
 Thus the bits / second is = 8* 104,220 bytes / s = 833,760 bits/s = 833.76kbps
+
+### 1.3)Question 3: Repeat the steps outlined in Questions 1 and 2 (NOT Question 3) but for TCP Reno. Compare the graphs for the two implementations and explain the differences. (Hint: compare the number of times the congestion window returns to zero in each case). How does the average throughput differ in both implementations?
+
+**TCP Renoe window size** | **TCP Renoe Throughput**
+:-------------------------:|:-------------------------:
+![TCP Renoe](./img/lab5-q1-3.png) |  ![TCP Renoe Throughput](./img/lab5-q1-3-b.png)
+
+**TCP Tahoe window size** | **TCP Tahoe Throughput**
+:-------------------------:|:-------------------------:
+![TCP Renoe](./img/lab5-q1.png) |  ![TCP Renoe Throughput](./img/lab5-q1-2.png)
+
+The differences in graphs for the window size is because on a fast retrasnsmit, TCP Renoe will set the cwind to be cwind / 2 and the ssthresh will be set to cwind / 2. Whereas TCP Tahoe sets the cwind to be 1 after a fast retransmit or a timeout.
+
+TCP Renoe average throughput is around 200 packets/sec = 200 _(540)_ 8 = 864,000 bits/s = 864 kbps.
+
+Where as TCP Tahoe has an average throughput of approx. 833.76kbps
+
+This is because the window size for TCP Renoe drop drastically to 1, and thus the number of packets sent per second (Throughput) will appear more smoother than TCP Tahoe.
 
 ## Exercise 2
 
