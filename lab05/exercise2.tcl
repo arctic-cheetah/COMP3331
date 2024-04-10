@@ -22,13 +22,14 @@ $ns trace-all $f2
 proc finish {} {
     global ns namf f1 f2
     $ns flush-trace
-	#Close the trace amd nam files
+    #Close the trace amd nam files
     close $namf
-	close $f1
-	close $f2
-	#Execute nam on the trace file
+    close $f1
+    close $f2
+    #Execute nam on the trace file
+    #Comment line 32 when running on home laptop
     exec nam out.nam &
-    # exec 3331 nam out.nam &
+    exec 3331 nam out.nam &
     # Execute gnuplot to display the two trace files tcp1.tr and tcp2.tr
     exec gnuplot throughput.plot &
     exit 0
@@ -104,7 +105,7 @@ $tcp2 set fid_ 2
 #Setup FTP over TCP connection
 #TODO:
 set ftp2 [new Application/FTP]
-$ftp2 attach-agent $tcp2 
+$ftp2 attach-agent $tcp2
 #------------------------------------------------------------
 
 #Create a TCP agent and attach it to node n7
@@ -152,28 +153,28 @@ $ftp4 attach-agent $tcp4
 #------------------------------------------------------------
 
 proc record {} {
-        global sink1 sink2 f1 f2
-        #TODO:
-        #Get an instance of the simulator
-        set ns [Simulator instance]
-        #Set the time after which the procedure should be called again
-        set time 0.1
-        #How many bytes have been received by the traffic sinks at n5?
-        set bw1 [$sink1 set bytes_]
-        set bw2 [$sink2 set bytes_]
-        #TODO:
-	    #Get the current time
-        set now [$ns now]
-        #Calculate the bandwidth (in MBit/s) and write it to the files
-        puts $f1 "$now [expr $bw1/$time*8/1000000]"
-        puts $f2 "$now [expr $bw2/$time*8/1000000]"
-        #Reset the bytes_ values on the traffic sinks
-        $sink1 set bytes_ 0
-        $sink2 set bytes_ 0
+    global sink1 sink2 f1 f2
+    #TODO:
+    #Get an instance of the simulator
+    set ns [Simulator instance]
+    #Set the time after which the procedure should be called again
+    set time 0.1
+    #How many bytes have been received by the traffic sinks at n5?
+    set bw1 [$sink1 set bytes_]
+    set bw2 [$sink2 set bytes_]
+    #TODO:
+    #Get the current time
+    set now [$ns now]
+    #Calculate the bandwidth (in MBit/s) and write it to the files
+    puts $f1 "$now [expr $bw1/$time*8/1000000]"
+    puts $f2 "$now [expr $bw2/$time*8/1000000]"
+    #Reset the bytes_ values on the traffic sinks
+    $sink1 set bytes_ 0
+    $sink2 set bytes_ 0
 
-        #TODO:
-        #Re-schedule the procedure
-        $ns at [expr $now+$time] "record"
+    #TODO:
+    #Re-schedule the procedure
+    $ns at [expr $now+$time] "record"
 }
 
 

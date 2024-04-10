@@ -21,12 +21,14 @@ proc finish {} {
         $ns flush-trace
         close $file1
         close $file2
-        exec nam out.nam &
+        # exec nam out.nam &
+        exec 3331 nam out.nam &
+
         exit 0
 }
 
 
-Node set multiPath_ 1 
+Node set multiPath_ 1
 
 #Create six nodes
 set n0 [$ns node]
@@ -78,8 +80,8 @@ set null0 [new Agent/Null]
 $ns attach-agent $n5 $null0
 
 #Connect the traffic source with the traffic sink
-$ns connect $udp0 $null0 
-$ns connect $udp1 $null0 
+$ns connect $udp0 $null0
+$ns connect $udp1 $null0
 
 # $ns rtmodel-at 1.0 down $n1 $n4
 # $ns rtmodel-at 1.2 up $n1 $n4
