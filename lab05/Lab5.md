@@ -23,7 +23,7 @@ The sender will be in the _slow-start_ stage to increase window size up to ssthr
 ![TCP window size](./img/lab5-q1-2.png)
 
 As seen in the graph above, the average throughput for TCP stabilises around 193 packets/second after 35s.
-The total packet size is (500 + 20 + 20)
+The total packet size including headers is: (500 + 20 + 20) = 540 bytes
 
 and so the bytes / second is: 540 *193 = 104,220 bytes / second
 
