@@ -52,7 +52,7 @@ This is because the window size for TCP Renoe drop drastically to 1, and thus th
 ## Exercise 2
 
 ![Q2](./img/lab5-q2.png)
-TODO:
+![Network](./img/lab5-q2-network.png)
 
 ### 2.1) Why is the throughput achieved by flow tcp2 higher than tcp1 between 6 sec to 8 sec?
 
@@ -69,6 +69,8 @@ The throughput fluctuates because tcp1 is in the slow start stage.
 
 ### 3.1) Which nodes communicate with which other nodes? Which route do the packets follow? Does it change over time?
 
+![Q3](./img/lab5-q3-1-b.png)
+
 node0 sends packets to node5 and node2 sends packets to node5
 
 The packets follow respectively from:
@@ -79,37 +81,58 @@ It does not change over time
 
 ### 3.2) What happens at time 1.0 and time 1.2? Does the route between the communicating nodes change as a result?
 
-Between time 1.0 to 1.2, the link between node1 to node4 is down. The packet following route node0 to node5 cannot reach node 5 and the packet terminates at node1. The route between node0 to node5 does not change as it is using a static routing protocol.
+![Q3](./img/lab5-q3-2.png)
+
+Between time 1.0 to 1.2, the link between node1 to node4 is down.
+
+The packet following route node0 to node5 cannot reach node 5 and the packet terminates at node1.
+
+The route between node0 to node5 does not change as it is using a static routing protocol.
 
 ### 3.3) Did you observe additional traffic compared to Step 3 above? How does the network react to the changes that take place at time 1.0 and time 1.2 now?
 
+![Q3](./img/lab5-q3-3.png)
+
+Additional traffic was observed by the Distance Vector Algorithm, as it sends packets to other routers of the low cost routes.
+
 Between time 1.0 to 1.2, the link between node1 to node4 is down. But now the communication between node0 to node5 follows the route:
 
-n0 -> n1 -> n2 -> n3 -> n5
+`n0 -> n1 -> n2 -> n3 -> n5`
 
 Packets now follow the above route.
 
-After 1.2 seconds, communication between node0 to node5 follows the route :
+After 1.2 seconds, link between node1 to node4 is online and communication between node0 to node5 follows the route:
 
-node0 -> node1 -> node4 -> node5
+`node0 -> node1 -> node4 -> node5`
+
+This is because this route has a lower cost lower than the previous route.
 
 ### 3.4) How does this change affect the routing? Explain why
+
+![Q3-4](./img/lab5-q3-4.png)
 
 Making the cost of the link higher (3) in the link between node1 -> node4 causes the communication between node0 to node5 to follow the route:
 n0 -> n1 -> n2 -> n3 -> n5
 
 This is because the cost to follow route:
 
-n0 -> n1 -> n2 -> n3 -> n5
+`n0 -> n1 -> n2 -> n3 -> n5`
 
-Is actually lower than the cost of the route:
-node0 -> node1 -> node4 -> node5
+has a cost of 4
+
+This is actually lower than the cost of the route:
+
+`node0 -> node1 -> node4 -> node5`
+
+as it has a cost of 5.
 
 ### 3.5) Describe what happens and deduce the effect of the line you just uncommented
+
+![Q3-5](./img/lab5-q3-5.png)
 
 THe communication between node2 to node5 can take either routes:
 
 (a) n2 -> n1 -> n4 -> n5
 (b) n2 -> n3 -> n5
 
-This occurs because the cost between the routes a and route b are actually the same. (They both have a total cost of 4). By uncommenting `Node set multiPath_ 1` this actually makes the packet take either route (a) or route(b).
+This occurs because the cost between the routes a and route b are actually the same. (They both have a total cost of 4). By uncommenting `Node set multiPath_ 1` this actually makes the packet take either route (a) or route(b). Thus the traffic will be split equally to both route(a) and route(b)

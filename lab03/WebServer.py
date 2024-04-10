@@ -92,9 +92,11 @@ def handle_client(sock: socket, addr, serverPort: int):
                 print(res)
                 sock.sendall(res)
         # (viii) The server should listen in a loop, waiting for the next request from the browser.
-        # (ix) The server should be able to handle HTTP 1.1 persistent connections. This means It should be able to handle multiple requests from the same connection. This will carry 1 mark if you manage to implement this
 
-    sock.shutdown(socket.SHUT_RDWR)
+    sock.shutdown(
+        socket.SHUT_RDWR
+    )  # (ix) The server should be able to handle HTTP 1.1 persistent connections. This means It should be able to handle multiple requests from the same connection. This will carry 1 mark if you manage to implement this
+
     sock.close()
 
 

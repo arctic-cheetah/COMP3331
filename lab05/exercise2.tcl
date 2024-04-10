@@ -29,7 +29,7 @@ proc finish {} {
     #Execute nam on the trace file
     #Comment line 32 when running on home laptop
     exec nam out.nam &
-    exec 3331 nam out.nam &
+    # exec 3331 nam out.nam &
     # Execute gnuplot to display the two trace files tcp1.tr and tcp2.tr
     exec gnuplot throughput.plot &
     exit 0
