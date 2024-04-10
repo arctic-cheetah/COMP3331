@@ -41,6 +41,8 @@ Thus the bits / second is = 8* 104,220 bytes / s = 833,760 bits/s = 833.76kbps
 
 The differences in graphs for the window size is because on a fast retrasnsmit, TCP Renoe will set the cwind to be cwind / 2 and the ssthresh will be set to cwind / 2. Whereas TCP Tahoe sets the cwind to be 1 after a fast retransmit or a timeout.
 
+Additionally for TCP Renoe in the beginning, there is a Triple Duplicate Ack and results in a brief constant window size of approx. 50. Then the cwind drops to 1 after encountering a timeout. Unlike TCP Tahoe, which drops the cwind to 1
+
 TCP Renoe average throughput is around 200 packets/sec = 200 _(540)_ 8 = 864,000 bits/s = 864 kbps.
 
 Where as TCP Tahoe has an average throughput of approx. 833.76kbps
